@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/product.schema.json",
+  "title": "Color Palette",
+  "description": "A Color Palette",
+  "type": "object",
+
+  "definitions": {
+    "PaletteInfo": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "The name of the color palette.",
+          "type": "string"
+        },
+        "semantic": {
+          "description": "What the palette stands for or can be used for.",
+          "type": ["string", "null"]
+        }
+      },
+      "required": ["name", "semantic"]
+    },
+    "CategoricalPalette": {
+      "allOf": [
+        { "$ref": "#/definitions/PaletteInfo" },
+        {
+          "properties": {
+            "type": {
+              "description": "Type of the palette.",
+              "type": "string",
+              "enum": ["categorical"]
+            }
+          }
+        }
+      ]
+    }
+  },
+
+  "properties": {
+    "brandName": {
+      "description": "The name of the whole brand (by org or company) of the palettes.",
+      "type": "string"
+    },
+    "palettes": {
+      "description": "All palettes (groups of colors).",
+      "type": "array",
+      "items": {
+        "oneOf": [{ "$ref": "#/definitions/CategoricalPalette" }]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+
+  "required": ["palettes"],
+
+  "additionalProperties": false
+}
