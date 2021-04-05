@@ -4,7 +4,9 @@
   "description": "JSON Schema for Color Palette",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "rm -rf lib && tsc --pretty",
+    "schema": "mkdir -p build && ts-json-schema-generator -f tsconfig.json -p src/index.ts -t ColorSchema --no-type-check --no-ref-encode > build/color-schema.json"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,8 @@
     "browser-resolve": "^2.0.0",
     "jest": "^26.6.3",
     "jest-json-schema": "^5.0.0",
-    "ts-jest": "^26.5.4"
+    "ts-jest": "^26.5.4",
+    "ts-json-schema-generator": "^0.89.2"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.13.0",

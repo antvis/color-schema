@@ -1,0 +1,246 @@
+{
+  "$ref": "#/definitions/ColorSchema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "AssetPack": {
+      "additionalProperties": false,
+      "properties": {
+        "brandName": {
+          "type": "string"
+        },
+        "palettes": {
+          "items": {
+            "$ref": "#/definitions/Palette"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "brandName",
+        "palettes"
+      ],
+      "type": "object"
+    },
+    "CategoricalPalette": {
+      "additionalProperties": false,
+      "properties": {
+        "colors": {
+          "items": {
+            "$ref": "#/definitions/Color"
+          },
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        },
+        "semantic": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "type": {
+          "const": "categorical",
+          "type": "string"
+        }
+      },
+      "required": [
+        "colors",
+        "name",
+        "semantic",
+        "type"
+      ],
+      "type": "object"
+    },
+    "Color": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "hex",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "type": "string"
+            },
+            "value": {
+              "$ref": "#/definitions/HexValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "rgb",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "type": "string"
+            },
+            "value": {
+              "$ref": "#/definitions/RGBValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "ColorSchema": {
+      "$ref": "#/definitions/AssetPack"
+    },
+    "ContinuousScalePalette": {
+      "additionalProperties": false,
+      "properties": {
+        "colors": {
+          "items": {
+            "$ref": "#/definitions/Color"
+          },
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        },
+        "semantic": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "type": {
+          "const": "continuous-scale",
+          "type": "string"
+        }
+      },
+      "required": [
+        "colors",
+        "name",
+        "semantic",
+        "type"
+      ],
+      "type": "object"
+    },
+    "DiscreteScalePalette": {
+      "additionalProperties": false,
+      "properties": {
+        "colors": {
+          "items": {
+            "$ref": "#/definitions/Color"
+          },
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        },
+        "semantic": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "type": {
+          "const": "discrete-scale",
+          "type": "string"
+        }
+      },
+      "required": [
+        "colors",
+        "name",
+        "semantic",
+        "type"
+      ],
+      "type": "object"
+    },
+    "HexValue": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/HexValue3"
+        },
+        {
+          "$ref": "#/definitions/HexValue4"
+        },
+        {
+          "$ref": "#/definitions/HexValue6"
+        },
+        {
+          "$ref": "#/definitions/HexValue8"
+        }
+      ]
+    },
+    "HexValue3": {
+      "type": "string"
+    },
+    "HexValue4": {
+      "type": "string"
+    },
+    "HexValue6": {
+      "type": "string"
+    },
+    "HexValue8": {
+      "type": "string"
+    },
+    "Palette": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/CategoricalPalette"
+        },
+        {
+          "$ref": "#/definitions/DiscreteScalePalette"
+        },
+        {
+          "$ref": "#/definitions/ContinuousScalePalette"
+        }
+      ]
+    },
+    "RGBValue": {
+      "additionalProperties": false,
+      "properties": {
+        "b": {
+          "type": "number"
+        },
+        "g": {
+          "type": "number"
+        },
+        "r": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "r",
+        "g",
+        "b"
+      ],
+      "type": "object"
+    },
+    "Undertone": {
+      "enum": [
+        "warm",
+        "neutral",
+        "cool"
+      ],
+      "type": "string"
+    }
+  }
+}
