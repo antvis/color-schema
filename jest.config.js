@@ -6,7 +6,6 @@ module.exports = {
       diagnostics: false,
     },
   },
-  browser: false,
   testPathIgnorePatterns: ["/node_modules/"],
   collectCoverage: false,
   testRegex: "/test/.*.test.ts?$",
