@@ -4,7 +4,7 @@ A JSON schema used to regulate semantic color assets or palettes.
 
 ## Valid Example
 
-```json
+```js
 {
   brandName: "antd",
   palettes: [
@@ -73,3 +73,22 @@ A JSON schema used to regulate semantic color assets or palettes.
 ```
 
 ![color demo](https://gw.alipayobjects.com/zos/antfincdn/0tgvCa2yVo/colordemo.png)
+
+## Usage
+
+> TODO
+
+`build/color-schema.json`
+
+### Validate
+
+by Ajv:
+
+```js
+// colorSchema...
+// data...
+
+const ajv = new Ajv();
+const validate = ajv.compile(colorSchema);
+const valid = validate(data);
+```
