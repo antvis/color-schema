@@ -37,7 +37,7 @@ const colorAssets = {
     },
     {
       name: "scale1",
-      semantic: "热情奔放",
+      semantic: "passionate",
       type: "discrete-scale",
       colors: [
         { space: "hex", value: "#fff7ec" },
@@ -48,8 +48,8 @@ const colorAssets = {
       ],
     },
     {
-      name: "scale1",
-      semantic: "静谧深邃",
+      name: "scale2",
+      semantic: "silent",
       type: "discrete-scale",
       colors: [
         { space: "hex", value: "#00f7ec" },
@@ -60,8 +60,8 @@ const colorAssets = {
       ],
     },
     {
-      name: "scale2",
-      semantic: "热情奔放",
+      name: "scale3",
+      semantic: "passionate",
       type: "continuous-scale",
       colors: [
         { space: "hex", value: "#fff7ec" },
