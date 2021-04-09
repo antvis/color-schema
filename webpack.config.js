@@ -22,13 +22,6 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.ts', '.tsx', '.json'],
     mainFields: ['module', 'browser', 'main'],
-    fallback: {
-      crypto: require.resolve('crypto-browserify'),
-      buffer: require.resolve('buffer/'),
-      stream: require.resolve('stream-browserify'),
-      path: require.resolve('path-browserify'),
-      fs: false,
-    },
   },
   module: {
     rules: [

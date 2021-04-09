@@ -1,4 +1,4 @@
 import pkg from "../package.json";
 export const version = pkg.version;
 
-export type { ColorSchema } from "./schema";
+export * from "./schema";
