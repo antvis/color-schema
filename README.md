@@ -92,3 +92,10 @@ const ajv = new Ajv();
 const validate = ajv.compile(colorSchema);
 const valid = validate(data);
 ```
+
+## Dev
+
+```bash
+npm install
+npm run start
+```
