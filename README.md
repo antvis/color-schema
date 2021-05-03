@@ -99,3 +99,8 @@ const valid = validate(data);
 npm install
 npm run start
 ```
+
+## Reference
+
+* [Ant Design Colors](https://ant.design/docs/spec/colors)
+* [AntV Color Design](https://antv.vision/en/docs/specification/language/palette)

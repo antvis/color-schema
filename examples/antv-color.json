@@ -1,0 +1,62 @@
+{
+  "brandName": "AntV",
+  "palettes": [
+    {
+      "name": "AntV10",
+      "semantic": null,
+      "type": "categorical",
+      "colors": [
+        {
+          "space": "hex",
+          "value": "#5B8FF9",
+          "name": "Geek Blue"
+        },
+        {
+          "space": "hex",
+          "value": "#61DDAA",
+          "name": "Cyan"
+        },
+        {
+          "space": "hex",
+          "value": "#65789B",
+          "name": "Grey"
+        },
+        {
+          "space": "hex",
+          "value": "#F6BD16",
+          "name": "Sunrise Yellow"
+        },
+        {
+          "space": "hex",
+          "value": "#7262fd",
+          "name": "Deep Purple"
+        },
+        {
+          "space": "hex",
+          "value": "#78D3F8",
+          "name": "Daybreak Blue"
+        },
+        {
+          "space": "hex",
+          "value": "#9661BC",
+          "name": "Golden Purple"
+        },
+        {
+          "space": "hex",
+          "value": "#F6903D",
+          "name": "Sunset Orange"
+        },
+        {
+          "space": "hex",
+          "value": "#008685",
+          "name": "Dark Green"
+        },
+        {
+          "space": "hex",
+          "value": "#F08BB4",
+          "name": "Magenta"
+        }
+      ]
+    }
+  ]
+}
