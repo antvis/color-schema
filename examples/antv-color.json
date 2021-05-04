@@ -57,6 +57,93 @@
           "name": "Magenta"
         }
       ]
+    },
+    {
+      "name": "AntV20",
+      "semantic": null,
+      "type": "categorical",
+      "colors": [
+        {
+          "space": "hex",
+          "value": "#5B8FF9"
+        },
+        {
+          "space": "hex",
+          "value": "#CDDDFD"
+        },
+        {
+          "space": "hex",
+          "value": "#61DDAA"
+        },
+        {
+          "space": "hex",
+          "value": "#CDF3E4"
+        },
+        {
+          "space": "hex",
+          "value": "#65789B"
+        },
+        {
+          "space": "hex",
+          "value": "#CED4DE"
+        },
+        {
+          "space": "hex",
+          "value": "#F6BD16"
+        },
+        {
+          "space": "hex",
+          "value": "#FCEBB9"
+        },
+        {
+          "space": "hex",
+          "value": "#7262FD"
+        },
+        {
+          "space": "hex",
+          "value": "#D3CEFD"
+        },
+        {
+          "space": "hex",
+          "value": "#78D3F8"
+        },
+        {
+          "space": "hex",
+          "value": "#D3EEF9"
+        },
+        {
+          "space": "hex",
+          "value": "#9661BC"
+        },
+        {
+          "space": "hex",
+          "value": "#DECFEA"
+        },
+        {
+          "space": "hex",
+          "value": "#F6903D"
+        },
+        {
+          "space": "hex",
+          "value": "#FFE0C7"
+        },
+        {
+          "space": "hex",
+          "value": "#008685"
+        },
+        {
+          "space": "hex",
+          "value": "#BBDEDE"
+        },
+        {
+          "space": "hex",
+          "value": "#F08BB4"
+        },
+        {
+          "space": "hex",
+          "value": "#FFE0ED"
+        }
+      ]
     }
   ]
 }
