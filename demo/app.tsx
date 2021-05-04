@@ -1,6 +1,7 @@
 import * as React from "react";
 import chroma from "chroma-js";
-import classic from "../examples/classic.json";
+import { Button, Dropdown, Menu, message } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 import {
   Color,
   Palette,
@@ -9,6 +10,28 @@ import {
   ContinuousScalePalette as ConP,
   ColorSpace,
 } from "../src";
+import classic from "../examples/classic.json";
+import antdColor from "../examples/antd-color.json";
+import antvColor from "../examples/antv-color.json";
+
+const examples = {
+  "Classic Demo": classic,
+  "Ant Design Colors": antdColor,
+  "AntV Colors": antvColor,
+};
+
+function handleMenuClick(e) {
+  message.info("Click on menu item.");
+  console.log("click", e);
+}
+
+const menu = (
+  <Menu onClick={handleMenuClick}>
+    {Object.keys(examples).map((exampleName) => (
+      <Menu.Item key={exampleName}>{exampleName}</Menu.Item>
+    ))}
+  </Menu>
+);
 
 const toHex = (space: ColorSpace, value: any): string => {
   switch (space) {
@@ -119,25 +142,34 @@ export default function App() {
   const colorAssets = classic;
 
   return (
-    <div className="palette-assets">
-      {colorAssets.palettes.map((palette, index) => (
-        <>
-          {index === 0 ? null : <p>------</p>}
-          <div className="palette-view">
-            <div className="palette-info">
-              {Object.keys(palette)
-                .filter((key) => key !== "colors")
-                .map((key) => (
-                  <p key={key}>
-                    <b>{key}</b>
-                    {`: ${palette[key]}`}
-                  </p>
-                ))}
+    <>
+      <div className="header" style={{ margin: 20, padding: 10 }}>
+        <Dropdown overlay={menu}>
+          <Button>
+            Examples <DownOutlined />
+          </Button>
+        </Dropdown>
+      </div>
+      <div className="palette-assets">
+        {colorAssets.palettes.map((palette, index) => (
+          <>
+            {index === 0 ? null : <p>------</p>}
+            <div className="palette-view">
+              <div className="palette-info">
+                {Object.keys(palette)
+                  .filter((key) => key !== "colors")
+                  .map((key) => (
+                    <p key={key}>
+                      <b>{key}</b>
+                      {`: ${palette[key]}`}
+                    </p>
+                  ))}
+              </div>
+              <ColorPaletteView palette={palette as Palette} />
             </div>
-            <ColorPaletteView palette={palette as Palette} />
-          </div>
-        </>
-      ))}
-    </div>
+          </>
+        ))}
+      </div>
+    </>
   );
 }
