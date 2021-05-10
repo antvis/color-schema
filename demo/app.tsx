@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import chroma from "chroma-js";
 import { Button, Dropdown, Menu, message } from "antd";
 import { DownOutlined } from "@ant-design/icons";
@@ -19,19 +19,6 @@ const examples = {
   "Ant Design Colors": antdColor,
   "AntV Colors": antvColor,
 };
-
-function handleMenuClick(e) {
-  message.info("Click on menu item.");
-  console.log("click", e);
-}
-
-const menu = (
-  <Menu onClick={handleMenuClick}>
-    {Object.keys(examples).map((exampleName) => (
-      <Menu.Item key={exampleName}>{exampleName}</Menu.Item>
-    ))}
-  </Menu>
-);
 
 const toHex = (space: ColorSpace, value: any): string => {
   switch (space) {
@@ -139,7 +126,24 @@ const ColorPaletteView = (props: { palette: Palette }) => {
 };
 
 export default function App() {
-  const colorAssets = classic;
+  const [exampleName, setExampleName] = useState(Object.keys(examples)[0]);
+
+  let example = examples[exampleName];
+
+  function handleMenuClick(e) {
+    const { key } = e;
+    setExampleName(key);
+    example = examples[exampleName];
+    console.log(example);
+  }
+
+  const menu = (
+    <Menu onClick={handleMenuClick}>
+      {Object.keys(examples).map((exampleName) => (
+        <Menu.Item key={exampleName}>{exampleName}</Menu.Item>
+      ))}
+    </Menu>
+  );
 
   return (
     <>
@@ -149,10 +153,11 @@ export default function App() {
             Examples <DownOutlined />
           </Button>
         </Dropdown>
+        {exampleName}
       </div>
       <div className="palette-assets">
-        {colorAssets.palettes.map((palette, index) => (
-          <>
+        {example.palettes.map((palette, index) => (
+          <div key={`p_${index}`}>
             {index === 0 ? null : <p>------</p>}
             <div className="palette-view">
               <div className="palette-info">
@@ -167,7 +172,7 @@ export default function App() {
               </div>
               <ColorPaletteView palette={palette as Palette} />
             </div>
-          </>
+          </div>
         ))}
       </div>
     </>
