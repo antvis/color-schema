@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import Ajv from "ajv";
+import colorSchema from "../build/color-schema.json";
 import chroma from "chroma-js";
-import { Button, Dropdown, Menu, message } from "antd";
+import { Button, Dropdown, Menu } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import {
   Color,
@@ -11,14 +13,19 @@ import {
   ColorSpace,
 } from "../src";
 import classic from "../examples/classic.json";
-import antdColor from "../examples/antd-color.json";
+import * as antdColors from "../examples/antd-color";
 import antvColor from "../examples/antv-color.json";
 
 const examples = {
   "Classic Demo": classic,
-  "Ant Design Colors": antdColor,
+  "antd Colors - Productional": antdColors.product,
+  "antd Colors - System-level Basic": antdColors.basic,
+  "antd Colors - System-level Neutral": antdColors.neutral,
   "AntV Colors": antvColor,
 };
+
+const ajv = new Ajv();
+const validateSchema = ajv.compile(colorSchema);
 
 const toHex = (space: ColorSpace, value: any): string => {
   switch (space) {
@@ -128,13 +135,9 @@ const ColorPaletteView = (props: { palette: Palette }) => {
 export default function App() {
   const [exampleName, setExampleName] = useState(Object.keys(examples)[0]);
 
-  let example = examples[exampleName];
-
   function handleMenuClick(e) {
     const { key } = e;
     setExampleName(key);
-    example = examples[exampleName];
-    console.log(example);
   }
 
   const menu = (
@@ -156,24 +159,28 @@ export default function App() {
         {exampleName}
       </div>
       <div className="palette-assets">
-        {example.palettes.map((palette, index) => (
-          <div key={`p_${index}`}>
-            {index === 0 ? null : <p>------</p>}
-            <div className="palette-view">
-              <div className="palette-info">
-                {Object.keys(palette)
-                  .filter((key) => key !== "colors")
-                  .map((key) => (
-                    <p key={key}>
-                      <b>{key}</b>
-                      {`: ${palette[key]}`}
-                    </p>
-                  ))}
+        {validateSchema(examples[exampleName]) ? (
+          examples[exampleName].palettes.map((palette, index) => (
+            <div key={`p_${index}`}>
+              {index === 0 ? null : <p>------</p>}
+              <div className="palette-view">
+                <div className="palette-info">
+                  {Object.keys(palette)
+                    .filter((key) => key !== "colors")
+                    .map((key) => (
+                      <p key={key}>
+                        <b>{key}</b>
+                        {`: ${palette[key]}`}
+                      </p>
+                    ))}
+                </div>
+                <ColorPaletteView palette={palette as Palette} />
               </div>
-              <ColorPaletteView palette={palette as Palette} />
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <div>invalid colors</div>
+        )}
       </div>
     </>
   );
