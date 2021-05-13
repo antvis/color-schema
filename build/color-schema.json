@@ -57,7 +57,68 @@
         {
           "additionalProperties": false,
           "properties": {
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "hex",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "type": "string"
+            },
+            "value": {
+              "$ref": "#/definitions/HexValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "rgb",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "type": "string"
+            },
+            "value": {
+              "$ref": "#/definitions/RGBValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "ColorSchema": {
+      "$ref": "#/definitions/AssetPack"
+    },
+    "ContinuousColor": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
             "location": {
+              "maximum": 1,
+              "minimum": 0,
               "type": "number"
             },
             "name": {
@@ -87,6 +148,8 @@
           "additionalProperties": false,
           "properties": {
             "location": {
+              "maximum": 1,
+              "minimum": 0,
               "type": "number"
             },
             "name": {
@@ -114,15 +177,12 @@
         }
       ]
     },
-    "ColorSchema": {
-      "$ref": "#/definitions/AssetPack"
-    },
     "ContinuousScalePalette": {
       "additionalProperties": false,
       "properties": {
         "colors": {
           "items": {
-            "$ref": "#/definitions/Color"
+            "$ref": "#/definitions/ContinuousColor"
           },
           "type": "array"
         },

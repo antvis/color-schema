@@ -6,6 +6,7 @@ import { Button, Dropdown, Menu } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import {
   Color,
+  ContinuousColor,
   Palette,
   CategoricalPalette as CatP,
   DiscreteScalePalette as DisP,
@@ -90,7 +91,7 @@ const DiscretePalette = (props: { palette: DisP }) => {
   );
 };
 
-const colorsHaveLocation = (colors: Color[]): boolean=> {
+const colorsHaveLocation = (colors: ContinuousColor[]): boolean=> {
   for(let color of colors){
     if(typeof color.location === "undefined"){
       return false;
