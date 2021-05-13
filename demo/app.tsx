@@ -90,11 +90,27 @@ const DiscretePalette = (props: { palette: DisP }) => {
   );
 };
 
+const colorsHaveLocation = (colors: Color[]): boolean=> {
+  for(let color of colors){
+    if(typeof color.location === "undefined"){
+      return false;
+    }
+  }
+  return true;
+}
+
 const ContinuousPalette = (props: { palette: ConP }) => {
   const { palette } = props;
   const { colors } = palette;
   const fwArray = [...Array(100)];
-  const colorScaleFunc = chroma.scale(colors.map((color) => toHex(color.space, color.value)));
+  const haveLocation = colorsHaveLocation(colors);
+  let domain = [0, 1];
+  if(haveLocation){
+    colors.sort((color1, color2) => color1.location - color2.location);
+    domain = colors.map((color) => color.location);
+  }
+  const colorScaleFunc = chroma.scale(colors.map((color) => toHex(color.space, color.value)))
+                          .domain(domain);
 
   return (
     <div className="palette">

@@ -57,6 +57,9 @@
         {
           "additionalProperties": false,
           "properties": {
+            "location": {
+              "type": "number"
+            },
             "name": {
               "type": "string"
             },
@@ -83,6 +86,9 @@
         {
           "additionalProperties": false,
           "properties": {
+            "location": {
+              "type": "number"
+            },
             "name": {
               "type": "string"
             },
