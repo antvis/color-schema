@@ -56,9 +56,18 @@
       "semantic": "热情奔放",
       "type": "continuous-scale",
       "colors": [
-        { "space": "hex", "value": "#fff7ec" },
-        { "space": "hex", "value": "#fc8d59" },
-        { "space": "hex", "value": "#7f0000" }
+        { "space": "hex", 
+          "value": "#fff7ec",
+          "location": 0
+        },
+        { "space": "hex", 
+          "value": "#fc8d59",
+          "location": 0.2
+        },
+        { "space": "hex", 
+          "value": "#7f0000",
+          "location": 1
+        }
       ]
     }
   ]
