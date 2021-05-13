@@ -6,8 +6,14 @@ export interface ColorBaseInfo {
   name?: string;
   undertone?: Undertone;
   usage?: string;
-
-  location?: number;
 }
 
 export type Color = ColorBaseInfo & ColorValue;
+
+export type ContinuousColor = Color & {
+  /**
+   * @minimum 0
+   * @maximum 1
+   */
+  location?: number;
+};

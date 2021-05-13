@@ -1,4 +1,4 @@
-import { Color } from "./color";
+import { Color, ContinuousColor } from "./color";
 
 export interface PaletteBaseInfo {
   name: string;
@@ -19,7 +19,7 @@ export type DiscreteScalePalette = PaletteBaseInfo & {
 
 export type ContinuousScalePalette = PaletteBaseInfo & {
   type: "continuous-scale";
-  colors: Color[];
+  colors: ContinuousColor[];
 };
 
 export type Palette =
