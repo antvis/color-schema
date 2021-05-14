@@ -11,6 +11,7 @@ import {
   CategoricalPalette as CatP,
   DiscreteScalePalette as DisP,
   ContinuousScalePalette as ConP,
+  MatrixPalette as MatP,
   ColorSpace,
 } from "../src";
 import classic from "../examples/classic.json";
@@ -132,6 +133,19 @@ const ContinuousPalette = (props: { palette: ConP }) => {
   );
 };
 
+const MatrixPalette = (props: { palette: MatP }) => {
+  const { palette } = props;
+  return (
+    <div className="palette">
+      {palette.colors[0].map((color1, index1) => (
+        palette.colors[1].map((color2, index2) => (
+          console.log(chroma.mix(toHex(color1.space, color1.value), toHex(color2.space, color2.value)).hex())
+        ))
+      ))}
+    </div>
+  );
+};
+
 const ColorPaletteView = (props: { palette: Palette }) => {
   const { palette } = props;
   switch (palette.type) {
@@ -143,6 +157,9 @@ const ColorPaletteView = (props: { palette: Palette }) => {
 
     case "continuous-scale":
       return <ContinuousPalette palette={palette as ConP} />;
+
+    case "matrix":
+      return <MatrixPalette palette={palette as MatP} />;
 
     default:
       return;
