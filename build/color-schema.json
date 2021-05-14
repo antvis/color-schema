@@ -267,6 +267,42 @@
     "HexValue8": {
       "type": "string"
     },
+    "MatrixPalette": {
+      "additionalProperties": false,
+      "properties": {
+        "colors": {
+          "items": {
+            "items": {
+              "$ref": "#/definitions/Color"
+            },
+            "type": "array"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        },
+        "semantic": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "type": {
+          "const": "matrix",
+          "type": "string"
+        }
+      },
+      "required": [
+        "colors",
+        "name",
+        "semantic",
+        "type"
+      ],
+      "type": "object"
+    },
     "Palette": {
       "anyOf": [
         {
@@ -277,6 +313,9 @@
         },
         {
           "$ref": "#/definitions/ContinuousScalePalette"
+        },
+        {
+          "$ref": "#/definitions/MatrixPalette"
         }
       ]
     },

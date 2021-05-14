@@ -5,7 +5,7 @@ export interface PaletteBaseInfo {
   semantic: string | null;
 }
 
-export type PaletteType = "categorical" | "discrete-scale" | "continuous-scale";
+export type PaletteType = "categorical" | "discrete-scale" | "continuous-scale" | "matrix";
 
 export type CategoricalPalette = PaletteBaseInfo & {
   type: "categorical";
@@ -22,7 +22,14 @@ export type ContinuousScalePalette = PaletteBaseInfo & {
   colors: ContinuousColor[];
 };
 
+export type MatrixPalette = PaletteBaseInfo & {
+  type: "matrix";
+  colors: [Color[], Color[]];
+};
+
+
 export type Palette =
   | CategoricalPalette
   | DiscreteScalePalette
-  | ContinuousScalePalette;
+  | ContinuousScalePalette
+  | MatrixPalette;
