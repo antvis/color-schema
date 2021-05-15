@@ -24,7 +24,10 @@ export type ContinuousScalePalette = PaletteBaseInfo & {
 
 export type MatrixPalette = PaletteBaseInfo & {
   type: "matrix";
-  colors: [Color[], Color[]];
+  colors: {
+    "x": Color[],
+    "y": Color[]
+  }
 };
 
 
