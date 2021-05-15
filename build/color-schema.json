@@ -271,15 +271,26 @@
       "additionalProperties": false,
       "properties": {
         "colors": {
-          "items": {
-            "items": {
-              "$ref": "#/definitions/Color"
+          "additionalProperties": false,
+          "properties": {
+            "x": {
+              "items": {
+                "$ref": "#/definitions/Color"
+              },
+              "type": "array"
             },
-            "type": "array"
+            "y": {
+              "items": {
+                "$ref": "#/definitions/Color"
+              },
+              "type": "array"
+            }
           },
-          "maxItems": 2,
-          "minItems": 2,
-          "type": "array"
+          "required": [
+            "x",
+            "y"
+          ],
+          "type": "object"
         },
         "name": {
           "type": "string"

@@ -149,8 +149,8 @@
       "name": "Matrix",
       "semantic": null,
       "type": "matrix",
-      "colors": [
-        [{
+      "colors": {
+        "x":[{
           "space": "hex",
           "value": "#D7D1FF"
         },
@@ -162,7 +162,7 @@
           "space": "hex",
           "value": "#209FED"
         }],
-        [{
+        "y":[{
           "space": "hex",
           "value": "#D7D1FF"
         },
@@ -174,7 +174,7 @@
           "space": "hex",
           "value": "#8B59FF"
         }]
-      ]
+      }
     }
   ]
 }
