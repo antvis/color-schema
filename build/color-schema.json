@@ -111,12 +111,78 @@
     "ColorSchema": {
       "$ref": "#/definitions/AssetPack"
     },
+    "ContinuousColor": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "location": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "hex",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "type": "string"
+            },
+            "value": {
+              "$ref": "#/definitions/HexValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "location": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "rgb",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "type": "string"
+            },
+            "value": {
+              "$ref": "#/definitions/RGBValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        }
+      ]
+    },
     "ContinuousScalePalette": {
       "additionalProperties": false,
       "properties": {
         "colors": {
           "items": {
-            "$ref": "#/definitions/Color"
+            "$ref": "#/definitions/ContinuousColor"
           },
           "type": "array"
         },
@@ -201,6 +267,53 @@
     "HexValue8": {
       "type": "string"
     },
+    "MatrixPalette": {
+      "additionalProperties": false,
+      "properties": {
+        "colors": {
+          "additionalProperties": false,
+          "properties": {
+            "x": {
+              "items": {
+                "$ref": "#/definitions/Color"
+              },
+              "type": "array"
+            },
+            "y": {
+              "items": {
+                "$ref": "#/definitions/Color"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ],
+          "type": "object"
+        },
+        "name": {
+          "type": "string"
+        },
+        "semantic": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "type": {
+          "const": "matrix",
+          "type": "string"
+        }
+      },
+      "required": [
+        "colors",
+        "name",
+        "semantic",
+        "type"
+      ],
+      "type": "object"
+    },
     "Palette": {
       "anyOf": [
         {
@@ -211,6 +324,9 @@
         },
         {
           "$ref": "#/definitions/ContinuousScalePalette"
+        },
+        {
+          "$ref": "#/definitions/MatrixPalette"
         }
       ]
     },

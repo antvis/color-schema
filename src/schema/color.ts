@@ -9,3 +9,11 @@ export interface ColorBaseInfo {
 }
 
 export type Color = ColorBaseInfo & ColorValue;
+
+export type ContinuousColor = Color & {
+  /**
+   * @minimum 0
+   * @maximum 1
+   */
+  location?: number;
+};

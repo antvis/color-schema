@@ -6,10 +6,12 @@ import { Button, Dropdown, Menu } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import {
   Color,
+  ContinuousColor,
   Palette,
   CategoricalPalette as CatP,
   DiscreteScalePalette as DisP,
   ContinuousScalePalette as ConP,
+  MatrixPalette as MatP,
   ColorSpace,
 } from "../src";
 import Swatch from "./components/Swatch";
@@ -91,11 +93,27 @@ const DiscretePalette = (props: { palette: DisP }) => {
   );
 };
 
+const colorsHaveLocation = (colors: ContinuousColor[]): boolean=> {
+  for(let color of colors){
+    if(typeof color.location === "undefined"){
+      return false;
+    }
+  }
+  return true;
+}
+
 const ContinuousPalette = (props: { palette: ConP }) => {
   const { palette } = props;
   const { colors } = palette;
   const fwArray = [...Array(100)];
-  const colorScaleFunc = chroma.scale(colors.map((color) => toHex(color.space, color.value)));
+  const haveLocation = colorsHaveLocation(colors);
+  let domain = [0, 1];
+  if(haveLocation){
+    colors.sort((color1, color2) => color1.location - color2.location);
+    domain = colors.map((color) => color.location);
+  }
+  const colorScaleFunc = chroma.scale(colors.map((color) => toHex(color.space, color.value)))
+                          .domain(domain);
 
   return (
     <div className="palette">
@@ -116,6 +134,34 @@ const ContinuousPalette = (props: { palette: ConP }) => {
   );
 };
 
+const MatrixColorCell = (props: { color: string }) => {
+  const { color } = props;
+  return (
+    <div className="color-cell">
+      <svg>
+        <rect width="20" height="20" rx="4" ry="4" fill={color}>
+        </rect>
+      </svg>
+    </div>
+  );
+};
+
+const MatrixPalette = (props: { palette: MatP }) => {
+  const { palette } = props;
+  return (
+    <div className="palette">
+      {palette.colors.y.map((color1, index1) => (
+        <div key={index1}>
+          {palette.colors.x.map((color2, index2) => (
+              <MatrixColorCell key={index2} color={chroma.mix(toHex(color1.space, color1.value), toHex(color2.space, color2.value)).hex()}/>
+            ))
+          }
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const ColorPaletteView = (props: { palette: Palette }) => {
   const { palette } = props;
   switch (palette.type) {
@@ -129,6 +175,9 @@ const ColorPaletteView = (props: { palette: Palette }) => {
 
     case "continuous-scale":
       return <ContinuousPalette palette={palette as ConP} />;
+
+    case "matrix":
+      return <MatrixPalette palette={palette as MatP} />;
 
     default:
       return;

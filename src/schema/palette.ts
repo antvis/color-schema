@@ -1,11 +1,11 @@
-import { Color } from "./color";
+import { Color, ContinuousColor } from "./color";
 
 export interface PaletteBaseInfo {
   name: string;
   semantic: string | null;
 }
 
-export type PaletteType = "categorical" | "discrete-scale" | "continuous-scale";
+export type PaletteType = "categorical" | "discrete-scale" | "continuous-scale" | "matrix";
 
 export type CategoricalPalette = PaletteBaseInfo & {
   type: "categorical";
@@ -19,10 +19,20 @@ export type DiscreteScalePalette = PaletteBaseInfo & {
 
 export type ContinuousScalePalette = PaletteBaseInfo & {
   type: "continuous-scale";
-  colors: Color[];
+  colors: ContinuousColor[];
 };
+
+export type MatrixPalette = PaletteBaseInfo & {
+  type: "matrix";
+  colors: {
+    "x": Color[],
+    "y": Color[]
+  }
+};
+
 
 export type Palette =
   | CategoricalPalette
   | DiscreteScalePalette
-  | ContinuousScalePalette;
+  | ContinuousScalePalette
+  | MatrixPalette;

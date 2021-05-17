@@ -144,6 +144,37 @@
           "value": "#FFE0ED"
         }
       ]
+    },
+    {
+      "name": "Matrix",
+      "semantic": null,
+      "type": "matrix",
+      "colors": {
+        "x":[{
+          "space": "hex",
+          "value": "#D7D1FF"
+        },
+        {
+          "space": "hex",
+          "value": "#A0BFFF"
+        },
+        {
+          "space": "hex",
+          "value": "#209FED"
+        }],
+        "y":[{
+          "space": "hex",
+          "value": "#D7D1FF"
+        },
+        {
+          "space": "hex",
+          "value": "#B78DFF"
+        },
+        {
+          "space": "hex",
+          "value": "#8B59FF"
+        }]
+      }
     }
   ]
 }
