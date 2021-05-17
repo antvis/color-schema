@@ -12,6 +12,7 @@ import {
   ContinuousScalePalette as ConP,
   ColorSpace,
 } from "../src";
+import Swatch from "./components/Swatch";
 import classic from "../examples/classic.json";
 import * as antdColors from "../examples/antd-color";
 import antvColor from "../examples/antv-color.json";
@@ -119,7 +120,9 @@ const ColorPaletteView = (props: { palette: Palette }) => {
   const { palette } = props;
   switch (palette.type) {
     case "categorical":
-      return <CategoricalPalette palette={palette as CatP} />;
+      // return <CategoricalPalette palette={palette as CatP} />;
+      const colorStr = palette.colors.map((color) => color.value || "").join();
+      return <Swatch title={palette.name} colors={"#f12,#fa3,#fc4,#ab4,#a3d,#c3d,#e33,#eac,#a23,#833,#876,#654"} />;
 
     case "discrete-scale":
       return <DiscretePalette palette={palette as DisP} />;
