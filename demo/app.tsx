@@ -18,6 +18,7 @@ import Swatch from "./components/Swatch";
 import classic from "../examples/classic.json";
 import * as antdColors from "../examples/antd-color";
 import antvColor from "../examples/antv-color.json";
+import { colorToHex, matrixToHex } from "./utils";
 
 const examples = {
   "Classic Demo": classic,
@@ -30,23 +31,12 @@ const examples = {
 const ajv = new Ajv();
 const validateSchema = ajv.compile(colorSchema);
 
-const toHex = (space: ColorSpace, value: any): string => {
-  switch (space) {
-    case "hex":
-      return value as string;
-
-    // TODO
-    default:
-      return;
-  }
-};
-
 const ColorCell = (props: { color: Color }) => {
   const { color } = props;
   const tooltip = Object.keys(color)
     .map((key) => `${key}: ${color[key]}`)
     .join("\n");
-  const fill = toHex(color.space, color.value);
+  const fill = colorToHex(color);
   return (
     <div className="color-cell">
       <svg>
@@ -77,7 +67,7 @@ const DiscretePalette = (props: { palette: DisP }) => {
   const colorFunc = (per) => {
     const i = Math.floor(per / (1 / len));
     const color = colors[i];
-    return toHex(color.space, color.value);
+    return colorToHex(color);
   };
 
   return (
@@ -93,14 +83,14 @@ const DiscretePalette = (props: { palette: DisP }) => {
   );
 };
 
-const colorsHaveLocation = (colors: ContinuousColor[]): boolean=> {
-  for(let color of colors){
-    if(typeof color.location === "undefined"){
+const colorsHaveLocation = (colors: ContinuousColor[]): boolean => {
+  for (let color of colors) {
+    if (typeof color.location === "undefined") {
       return false;
     }
   }
   return true;
-}
+};
 
 const ContinuousPalette = (props: { palette: ConP }) => {
   const { palette } = props;
@@ -108,12 +98,11 @@ const ContinuousPalette = (props: { palette: ConP }) => {
   const fwArray = [...Array(100)];
   const haveLocation = colorsHaveLocation(colors);
   let domain = [0, 1];
-  if(haveLocation){
+  if (haveLocation) {
     colors.sort((color1, color2) => color1.location - color2.location);
     domain = colors.map((color) => color.location);
   }
-  const colorScaleFunc = chroma.scale(colors.map((color) => toHex(color.space, color.value)))
-                          .domain(domain);
+  const colorScaleFunc = chroma.scale(colors.map((color) => colorToHex(color))).domain(domain);
 
   return (
     <div className="palette">
@@ -139,8 +128,7 @@ const MatrixColorCell = (props: { color: string }) => {
   return (
     <div className="color-cell">
       <svg>
-        <rect width="20" height="20" rx="4" ry="4" fill={color}>
-        </rect>
+        <rect width="20" height="20" rx="4" ry="4" fill={color}></rect>
       </svg>
     </div>
   );
@@ -153,9 +141,8 @@ const MatrixPalette = (props: { palette: MatP }) => {
       {palette.colors.y.map((color1, index1) => (
         <div key={index1}>
           {palette.colors.x.map((color2, index2) => (
-              <MatrixColorCell key={index2} color={chroma.mix(toHex(color1.space, color1.value), toHex(color2.space, color2.value)).hex()}/>
-            ))
-          }
+            <MatrixColorCell key={index2} color={chroma.mix(colorToHex(color1), colorToHex(color2)).hex()} />
+          ))}
         </div>
       ))}
     </div>
@@ -166,18 +153,36 @@ const ColorPaletteView = (props: { palette: Palette }) => {
   const { palette } = props;
   switch (palette.type) {
     case "categorical":
-      // return <CategoricalPalette palette={palette as CatP} />;
-      const colorStr = palette.colors.map((color) => color.value || "").join();
-      return <Swatch title={palette.name} colors={"#f12,#fa3,#fc4,#ab4,#a3d,#c3d,#e33,#eac,#a23,#833,#876,#654"} />;
+      return (
+        <Swatch
+          title={palette.name}
+          type="categorical"
+          colors={palette.colors.map((color) => colorToHex(color))}
+          colornames={palette.colors.map((color) => color.name)}
+        />
+      );
 
     case "discrete-scale":
-      return <DiscretePalette palette={palette as DisP} />;
+      return (
+        <Swatch
+          title={palette.name}
+          type="discrete-scale"
+          colors={palette.colors.map((color) => colorToHex(color))}
+          colornames={palette.colors.map((color) => color.name)}
+        />
+      );
 
     case "continuous-scale":
       return <ContinuousPalette palette={palette as ConP} />;
 
     case "matrix":
-      return <MatrixPalette palette={palette as MatP} />;
+      return (
+        <Swatch
+          title={palette.name}
+          type="matrix"
+          colors={matrixToHex(palette).reduce((acc, cur) => acc.concat(...cur), [])}
+        />
+      );
 
     default:
       return;

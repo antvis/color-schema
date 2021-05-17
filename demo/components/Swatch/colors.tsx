@@ -1,23 +1,8 @@
 import React, { FC, useState } from "react";
-import { Switch, message, Tooltip } from "antd";
+import { message, Tooltip } from "antd";
 import { QuestionCircleFilled } from "@ant-design/icons";
 import classNames from "classnames";
 import styles from "./index.module.less";
-
-import { PaletteType } from "../../../src";
-import CatSwatch from "./categorical";
-import DisSwatch from "./discreteScale";
-import MatSwatch from "./matrix";
-
-interface SwatchProps {
-  title: string;
-  darkmode?: boolean;
-  colors?: string[];
-  colornames?: string[];
-  grid?: "sudoku";
-  descriptions?: string[];
-  type: PaletteType;
-}
 
 const copyToClipboard = (str: string) => {
   const el = document.createElement("textarea");
@@ -90,22 +75,4 @@ const Colors: FC<ColorsProps> = ({ colorStyle = {}, colors = [], names = [], nam
   );
 };
 
-const Swatch: FC<SwatchProps> = (props) => {
-  const { type } = props;
-
-  switch (type) {
-    case "categorical":
-      return <CatSwatch {...props} />;
-
-    case "discrete-scale":
-      return <DisSwatch {...props} />;
-
-    case "matrix":
-      return <MatSwatch {...props} />;
-
-    default:
-      return <p>...</p>;
-  }
-};
-
-export default Swatch;
+export default Colors;
