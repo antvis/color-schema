@@ -273,7 +273,7 @@
         "colors": {
           "items": {
             "items": {
-              "$ref": "#/definitions/ContinuousColor"
+              "$ref": "#/definitions/Color"
             },
             "type": "array"
           },
