@@ -168,7 +168,8 @@ const ColorPaletteView = (props: { palette: Palette }) => {
           title={palette.name}
           type="discrete-scale"
           colors={palette.colors.map((color) => colorToHex(color))}
-          colornames={palette.colors.map((color) => color.name)}
+          colornames={[palette.name]}
+          descriptions={[palette.description]}
         />
       );
 
