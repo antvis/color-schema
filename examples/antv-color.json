@@ -149,7 +149,41 @@
       "name": "Matrix",
       "semantic": null,
       "type": "matrix",
-      "colors": {
+      "colors": [
+        [{
+          "space": "hex",
+          "value": "#8B59FF"
+        },
+        {
+          "space": "hex",
+          "value": "#6752FF"
+        },
+        {
+          "space": "hex",
+          "value": "#1444ED"
+        }],
+        [{
+          "space": "hex",
+          "value": "#B78DFF"
+        },{
+          "space": "hex",
+          "value": "#8881FF"
+        },{
+          "space": "hex",
+          "value": "#1B6BED"
+        }],
+        [{
+          "space": "hex",
+          "value": "#D7D1FF"
+        },{
+          "space": "hex",
+          "value": "#A0BFFF"
+        },{
+          "space": "hex",
+          "value": "#209FED"
+        }]
+      ],
+      "origin": {
         "x":[{
           "space": "hex",
           "value": "#D7D1FF"
