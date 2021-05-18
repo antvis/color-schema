@@ -280,6 +280,18 @@
       "additionalProperties": false,
       "properties": {
         "colors": {
+          "items": {
+            "items": {
+              "$ref": "#/definitions/Color"
+            },
+            "type": "array"
+          },
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        },
+        "origin": {
           "additionalProperties": false,
           "properties": {
             "x": {
@@ -301,12 +313,6 @@
           ],
           "type": "object"
         },
-        "description": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
         "semantic": {
           "type": [
             "string",
@@ -321,6 +327,7 @@
       "required": [
         "colors",
         "name",
+        "origin",
         "semantic",
         "type"
       ],

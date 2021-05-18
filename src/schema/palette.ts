@@ -25,10 +25,11 @@ export type ContinuousScalePalette = PaletteBaseInfo & {
 
 export type MatrixPalette = PaletteBaseInfo & {
   type: "matrix";
-  colors: {
-    x: Color[];
-    y: Color[];
-  };
+  colors: Color[][];
+  origin: {
+    "x": Color[],
+    "y": Color[]
+  }
 };
 
 export type Palette = CategoricalPalette | DiscreteScalePalette | ContinuousScalePalette | MatrixPalette;
