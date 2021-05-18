@@ -271,6 +271,18 @@
       "additionalProperties": false,
       "properties": {
         "colors": {
+          "items": {
+            "items": {
+              "$ref": "#/definitions/ContinuousColor"
+            },
+            "type": "array"
+          },
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        },
+        "origin": {
           "additionalProperties": false,
           "properties": {
             "x": {
@@ -292,9 +304,6 @@
           ],
           "type": "object"
         },
-        "name": {
-          "type": "string"
-        },
         "semantic": {
           "type": [
             "string",
@@ -309,6 +318,7 @@
       "required": [
         "colors",
         "name",
+        "origin",
         "semantic",
         "type"
       ],

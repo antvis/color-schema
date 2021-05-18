@@ -133,26 +133,14 @@ const ContinuousPalette = (props: { palette: ConP }) => {
   );
 };
 
-const MatrixColorCell = (props: { color: string }) => {
-  const { color } = props;
-  return (
-    <div className="color-cell">
-      <svg>
-        <rect width="20" height="20" rx="4" ry="4" fill={color}>
-        </rect>
-      </svg>
-    </div>
-  );
-};
-
 const MatrixPalette = (props: { palette: MatP }) => {
   const { palette } = props;
   return (
-    <div className="palette">
-      {palette.colors.y.map((color1, index1) => (
-        <div key={index1}>
-          {palette.colors.x.map((color2, index2) => (
-              <MatrixColorCell key={index2} color={chroma.mix(toHex(color1.space, color1.value), toHex(color2.space, color2.value)).hex()}/>
+    <div className="matrixpalette">
+      {palette.colors.map((colors, index1) => (
+        <div key={index1} className="matrixPalette-row">
+          {colors.map((color, index2) => (
+              <ColorCell key={index2} color={color}/>
             ))
           }
         </div>
