@@ -130,9 +130,8 @@ const MatrixPalette = (props: { palette: MatP }) => {
       {palette.colors.map((colors, index1) => (
         <div key={index1} className="matrixPalette-row">
           {colors.map((color, index2) => (
-              <ColorCell key={index2} color={color}/>
-            ))
-          }
+            <ColorCell key={index2} color={color} />
+          ))}
         </div>
       ))}
     </div>
@@ -171,7 +170,8 @@ const ColorPaletteView = (props: { palette: Palette }) => {
         <Swatch
           title={palette.name}
           type="matrix"
-          colors={matrixToHex(palette).reduce((acc, cur) => acc.concat(...cur), [])}
+          colors={palette.colors.reduce((acc, cur) => acc.concat(...cur)).map((c) => colorToHex(c))}
+          // colors={matrixToHex(palette).reduce((acc, cur) => acc.concat(...cur), [])}
         />
       );
 

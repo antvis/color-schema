@@ -4,7 +4,7 @@ import { HexValue6, MatrixPalette } from "../../src";
 
 export function matrixToHex(matrix: MatrixPalette): HexValue6[][] {
   const hexMatrix = [];
-  const { x, y } = matrix.colors;
+  const { x, y } = matrix.origin;
 
   y.forEach((color1) => {
     const yColors = [];
