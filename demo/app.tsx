@@ -163,7 +163,16 @@ const ColorPaletteView = (props: { palette: Palette }) => {
       );
 
     case "continuous-scale":
-      return <ContinuousPalette palette={palette as ConP} />;
+      return (
+        <Swatch
+          title={palette.name}
+          type="continuous-scale"
+          colors={palette.colors.map((color) => colorToHex(color))}
+          locations={colorsHaveLocation(palette.colors) ? palette.colors.map((color)=> color.location): undefined}
+          colornames={[palette.name]}
+          descriptions={[palette.description]}
+        />
+      );
 
     case "matrix":
       return (
