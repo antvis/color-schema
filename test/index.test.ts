@@ -1,4 +1,5 @@
-import * as colorSchema from "../hand-made-schema.json";
+// import * as colorSchema from "../hand-made-schema.json";
+import * as colorSchema from "../build/color-schema.json";
 import Ajv from "ajv";
 import { matchersWithOptions } from "jest-json-schema";
 import classic from "../examples/classic.json";

@@ -3,7 +3,7 @@
   "palettes": [
     {
       "name": "trinity",
-      "semantic": null,
+      "semantic": "three",
       "type": "categorical",
       "colors": [
         {
@@ -29,7 +29,7 @@
     },
     {
       "name": "scale1",
-      "semantic": "热情奔放",
+      "semantic": "passional",
       "type": "discrete-scale",
       "colors": [
         { "space": "hex", "value": "#fff7ec" },
@@ -40,35 +40,110 @@
       ]
     },
     {
-      "name": "scale1",
-      "semantic": "静谧深邃",
+      "name": "Leaf Yellow",
+      "semantic": "tranquil",
       "type": "discrete-scale",
+      "description": "Colors of leaves in different seasons.",
       "colors": [
-        { "space": "hex", "value": "#00f7ec" },
-        { "space": "hex", "value": "#00d49e" },
-        { "space": "hex", "value": "#008d59" },
-        { "space": "hex", "value": "#00301f" },
-        { "space": "hex", "value": "#000000" }
+        { "space": "hex", "value": "#FFEBB0" },
+        { "space": "hex", "value": "#FFDF80" },
+        { "space": "hex", "value": "#FACA3E" },
+        { "space": "hex", "value": "#E6B80B" },
+        { "space": "hex", "value": "#B5AC23" },
+        { "space": "hex", "value": "#6A9A48" },
+        { "space": "hex", "value": "#20876B" },
+        { "space": "hex", "value": "#06746B" },
+        { "space": "hex", "value": "#044E48" }
       ]
     },
     {
-      "name": "scale2",
-      "semantic": "热情奔放",
+      "name": "scale3",
+      "semantic": "passional",
       "type": "continuous-scale",
       "colors": [
-        { "space": "hex", 
-          "value": "#fff7ec",
-          "location": 0
-        },
-        { "space": "hex", 
-          "value": "#fc8d59",
-          "location": 0.2
-        },
-        { "space": "hex", 
-          "value": "#7f0000",
-          "location": 1
-        }
+        { "space": "hex", "value": "#fff7ec", "location": 0 },
+        { "space": "hex", "value": "#fc8d59", "location": 0.2 },
+        { "space": "hex", "value": "#7f0000", "location": 1 }
       ]
+    },
+    {
+      "name": "Matrix",
+      "semantic": "mysterious",
+      "type": "matrix",
+      "colors": [
+        [
+          {
+            "space": "hex",
+            "value": "#8B59FF"
+          },
+          {
+            "space": "hex",
+            "value": "#6752FF"
+          },
+          {
+            "space": "hex",
+            "value": "#1444ED"
+          }
+        ],
+        [
+          {
+            "space": "hex",
+            "value": "#B78DFF"
+          },
+          {
+            "space": "hex",
+            "value": "#8881FF"
+          },
+          {
+            "space": "hex",
+            "value": "#1B6BED"
+          }
+        ],
+        [
+          {
+            "space": "hex",
+            "value": "#D7D1FF"
+          },
+          {
+            "space": "hex",
+            "value": "#A0BFFF"
+          },
+          {
+            "space": "hex",
+            "value": "#209FED"
+          }
+        ]
+      ],
+      "origin": {
+        "x": [
+          {
+            "space": "hex",
+            "value": "#D7D1FF"
+          },
+          {
+            "space": "hex",
+            "value": "#A0BFFF"
+          },
+          {
+            "space": "hex",
+            "value": "#209FED"
+          }
+        ],
+        "y": [
+          {
+            "space": "hex",
+            "value": "#D7D1FF"
+          },
+          {
+            "space": "hex",
+            "value": "#B78DFF"
+          },
+          {
+            "space": "hex",
+            "value": "#8B59FF"
+          }
+        ]
+      }
     }
   ]
 }

@@ -3,6 +3,7 @@ import { Color, ContinuousColor } from "./color";
 export interface PaletteBaseInfo {
   name: string;
   semantic: string | null;
+  description?: string;
 }
 
 export type PaletteType = "categorical" | "discrete-scale" | "continuous-scale" | "matrix";
@@ -31,9 +32,4 @@ export type MatrixPalette = PaletteBaseInfo & {
   }
 };
 
-
-export type Palette =
-  | CategoricalPalette
-  | DiscreteScalePalette
-  | ContinuousScalePalette
-  | MatrixPalette;
+export type Palette = CategoricalPalette | DiscreteScalePalette | ContinuousScalePalette | MatrixPalette;
