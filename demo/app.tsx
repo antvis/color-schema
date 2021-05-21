@@ -148,6 +148,7 @@ const ColorPaletteView = (props: { palette: Palette }) => {
           type="categorical"
           colors={palette.colors.map((color) => colorToHex(color))}
           colornames={palette.colors.map((color) => color.name)}
+          description={palette.description}
         />
       );
 
@@ -157,8 +158,7 @@ const ColorPaletteView = (props: { palette: Palette }) => {
           title={palette.name}
           type="discrete-scale"
           colors={palette.colors.map((color) => colorToHex(color))}
-          colornames={[palette.name]}
-          descriptions={[palette.description]}
+          description={palette.description}
         />
       );
 
@@ -169,8 +169,7 @@ const ColorPaletteView = (props: { palette: Palette }) => {
           type="continuous-scale"
           colors={palette.colors.map((color) => colorToHex(color))}
           locations={colorsHaveLocation(palette.colors) ? palette.colors.map((color)=> color.location): undefined}
-          colornames={[palette.name]}
-          descriptions={[palette.description]}
+          description={palette.description}
         />
       );
 
@@ -180,6 +179,7 @@ const ColorPaletteView = (props: { palette: Palette }) => {
           title={palette.name}
           type="matrix"
           colors={palette.colors.reduce((acc, cur) => acc.concat(...cur)).map((c) => colorToHex(c))}
+          description={palette.description}
           // colors={matrixToHex(palette).reduce((acc, cur) => acc.concat(...cur), [])}
         />
       );
