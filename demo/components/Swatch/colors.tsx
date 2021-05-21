@@ -19,13 +19,43 @@ interface ColorsProps {
   names?: string[];
   name?: string;
   description?: string;
+  tooltip?: (color:string, index:number)=>{};
 }
 
-const Colors: FC<ColorsProps> = ({ colorStyle = {}, colors = [], names = [], name, description }) => {
+const Colors: FC<ColorsProps> = ({ colorStyle = {}, colors = [], names = [], name, description, tooltip }) => {
   if (colors.length === 0) {
     return null;
   }
 
+  const Color = (color, i) => (
+    <div
+      className={classNames(styles.color, {
+        [styles.first]: i === 0,
+        [styles.third]: i === 2,
+        [styles.seventh]: i === 6,
+        [styles.last]: i === colors.length - 1,
+      })}
+      style={{
+        ...colorStyle,
+        backgroundColor: color,
+        color,
+      }}
+      onClick={() => {
+        copyToClipboard(color);
+        message.success(
+          <span>
+            Copied
+            <span style={{ backgroundColor: color }} className={styles.block} />
+            {color}
+          </span>
+        );
+      }}
+    >
+      <span className={styles.name} style={{ display: colors.length > 10 ? "none" : "" }}>
+        {names[i]}
+      </span>
+    </div>
+  )
   return (
     <div className={styles.colors} style={{ width: colors.length > 10 ? "100%" : "" }}>
       <div className={styles.container}>
@@ -41,34 +71,15 @@ const Colors: FC<ColorsProps> = ({ colorStyle = {}, colors = [], names = [], nam
         )}
 
         {colors.map((color: string, i: number) => (
-          <div
-            className={classNames(styles.color, {
-              [styles.first]: i === 0,
-              [styles.third]: i === 2,
-              [styles.seventh]: i === 6,
-              [styles.last]: i === colors.length - 1,
-            })}
-            style={{
-              ...colorStyle,
-              backgroundColor: color,
-              color,
-            }}
-            key={i}
-            onClick={() => {
-              copyToClipboard(color);
-              message.success(
-                <span>
-                  Copied
-                  <span style={{ backgroundColor: color }} className={styles.block} />
-                  {color}
-                </span>
-              );
-            }}
-          >
-            <span className={styles.name} style={{ display: colors.length > 10 ? "none" : "" }}>
-              {names[i]}
-            </span>
-          </div>
+          <React.Fragment key={i}>
+            {
+              tooltip ? (
+                <Tooltip placement="top" title={tooltip(color, i)}>
+                  {Color(color, i)}
+                </Tooltip>
+              ): Color(color, i)
+            }
+          </React.Fragment>
         ))}
       </div>
     </div>
