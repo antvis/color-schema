@@ -12,7 +12,7 @@ import {
   DiscreteScalePalette as DisP,
   ContinuousScalePalette as ConP,
   MatrixPalette as MatP,
-  ColorSpace,
+  ColorSchema,
 } from "../src";
 import Swatch from "./components/Swatch";
 import classic from "../examples/classic.json";
@@ -20,7 +20,7 @@ import * as antdColors from "../examples/antd-color";
 import antvColor from "../examples/antv-color.json";
 import { colorToHex, matrixToHex } from "./utils";
 
-const examples = {
+const examples: Record<string, any> = {
   "Classic Demo": classic,
   "antd Colors - Productional": antdColors.product,
   "antd Colors - System-level Basic": antdColors.basic,
@@ -34,7 +34,7 @@ const validateSchema = ajv.compile(colorSchema);
 const ColorCell = (props: { color: Color }) => {
   const { color } = props;
   const tooltip = Object.keys(color)
-    .map((key) => `${key}: ${color[key]}`)
+    .map((key) => `${key}: ${color[key as keyof Color]}`)
     .join("\n");
   const fill = colorToHex(color);
   return (
@@ -64,7 +64,7 @@ const DiscretePalette = (props: { palette: DisP }) => {
   const { colors } = palette;
   const len = colors.length;
   const fwArray = [...Array(100)];
-  const colorFunc = (per) => {
+  const colorFunc = (per: number) => {
     const i = Math.floor(per / (1 / len));
     const color = colors[i];
     return colorToHex(color);
@@ -99,8 +99,8 @@ const ContinuousPalette = (props: { palette: ConP }) => {
   const haveLocation = colorsHaveLocation(colors);
   let domain = [0, 1];
   if (haveLocation) {
-    colors.sort((color1, color2) => color1.location - color2.location);
-    domain = colors.map((color) => color.location);
+    colors.sort((color1, color2) => (color1.location || 0) - (color2.location || 0));
+    domain = colors.map((color) => color.location || 0);
   }
   const colorScaleFunc = chroma.scale(colors.map((color) => colorToHex(color))).domain(domain);
 
@@ -147,7 +147,7 @@ const ColorPaletteView = (props: { palette: Palette }) => {
           title={palette.name}
           type="categorical"
           colors={palette.colors.map((color) => colorToHex(color))}
-          colornames={palette.colors.map((color) => color.name)}
+          colornames={palette.colors.map((color) => color.name || "")}
           description={palette.description}
         />
       );
@@ -168,7 +168,11 @@ const ColorPaletteView = (props: { palette: Palette }) => {
           title={palette.name}
           type="continuous-scale"
           colors={palette.colors.map((color) => colorToHex(color))}
-          locations={colorsHaveLocation(palette.colors) ? palette.colors.map((color)=> color.location): undefined}
+          locations={
+            palette.colors.every((color) => color.location)
+              ? palette.colors.map((color) => color.location as number)
+              : undefined
+          }
           description={palette.description}
         />
       );
@@ -185,14 +189,14 @@ const ColorPaletteView = (props: { palette: Palette }) => {
       );
 
     default:
-      return;
+      return <></>;
   }
 };
 
 export default function App() {
   const [exampleName, setExampleName] = useState(Object.keys(examples)[0]);
 
-  function handleMenuClick(e) {
+  function handleMenuClick(e: { key: any }) {
     const { key } = e;
     setExampleName(key);
   }
@@ -217,7 +221,7 @@ export default function App() {
       </div>
       <div className="palette-assets">
         {validateSchema(examples[exampleName]) ? (
-          examples[exampleName].palettes.map((palette, index) => (
+          examples[exampleName].palettes.map((palette: Palette, index: number) => (
             <div key={`p_${index}`}>
               {index === 0 ? null : <p>------</p>}
               <div className="palette-view">
@@ -227,7 +231,7 @@ export default function App() {
                     .map((key) => (
                       <p key={key}>
                         <b>{key}</b>
-                        {`: ${palette[key]}`}
+                        {`: ${palette[key as keyof Palette]}`}
                       </p>
                     ))}
                 </div>

@@ -19,7 +19,7 @@ interface ColorsProps {
   names?: string[];
   name?: string;
   description?: string;
-  tooltip?: (color:string, index:number)=>{};
+  tooltip?: (color: string, index: number) => {};
 }
 
 const Colors: FC<ColorsProps> = ({ colorStyle = {}, colors = [], names = [], name, description, tooltip }) => {
@@ -27,7 +27,7 @@ const Colors: FC<ColorsProps> = ({ colorStyle = {}, colors = [], names = [], nam
     return null;
   }
 
-  const Color = (color, i) => (
+  const Color = (color: string, i: number) => (
     <div
       className={classNames(styles.color, {
         [styles.first]: i === 0,
@@ -55,7 +55,7 @@ const Colors: FC<ColorsProps> = ({ colorStyle = {}, colors = [], names = [], nam
         {names[i]}
       </span>
     </div>
-  )
+  );
   return (
     <div className={styles.colors} style={{ width: colors.length > 10 ? "100%" : "" }}>
       <div className={styles.container}>
@@ -72,13 +72,13 @@ const Colors: FC<ColorsProps> = ({ colorStyle = {}, colors = [], names = [], nam
 
         {colors.map((color: string, i: number) => (
           <React.Fragment key={i}>
-            {
-              tooltip ? (
-                <Tooltip placement="top" title={tooltip(color, i)}>
-                  {Color(color, i)}
-                </Tooltip>
-              ): Color(color, i)
-            }
+            {tooltip ? (
+              <Tooltip placement="top" title={tooltip(color, i)}>
+                {Color(color, i)}
+              </Tooltip>
+            ) : (
+              Color(color, i)
+            )}
           </React.Fragment>
         ))}
       </div>
