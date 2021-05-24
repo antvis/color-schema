@@ -27,9 +27,9 @@ export type MatrixPalette = PaletteBaseInfo & {
   type: "matrix";
   colors: Color[][];
   origin: {
-    "x": Color[],
-    "y": Color[]
-  }
+    x: Color[];
+    y: Color[];
+  };
 };
 
 export type Palette = CategoricalPalette | DiscreteScalePalette | ContinuousScalePalette | MatrixPalette;

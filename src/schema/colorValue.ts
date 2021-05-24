@@ -1,22 +1,6 @@
 export type ColorSpace = "hex" | "rgb" | "rgba" | "lab" | "cmyk";
 
-export type HexChar =
-  | "0"
-  | "1"
-  | "2"
-  | "3"
-  | "4"
-  | "5"
-  | "6"
-  | "7"
-  | "8"
-  | "9"
-  | "a"
-  | "b"
-  | "c"
-  | "d"
-  | "e"
-  | "f";
+export type HexChar = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "a" | "b" | "c" | "d" | "e" | "f";
 export type HexValue3 = string; // `${"#" | "" | "0x"}${HexChar}${HexChar}${HexChar}`;
 export type HexValue6 = string; // Expression produces a union type that is too complex to represent
 export type HexValue4 = string; // Expression produces a union type that is too complex to represent
