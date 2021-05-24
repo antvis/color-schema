@@ -21,6 +21,7 @@
     "pack": "webpack --config=webpack.config.js",
     "format": "prettier --write \"src/**/*.ts\" \"demo/**/*.ts\" \"demo/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
     "prepublish": "npm run module && npm run pack",
     "prepublishOnly": "npm run prepublish && npm test && npm run lint && webpack --mode=production",
     "preversion": "npm run lint",
@@ -33,6 +34,9 @@
   },
   "author": "neoddish",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/neoddish/color-palette-json-schema/issues"
   },
@@ -42,6 +46,7 @@
     "@ant-design/icons": "^4.6.2",
     "@babel/core": "^7.13.14",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-export-default-from": "^7.12.13",
     "@babel/plugin-proposal-object-rest-spread": "^7.13.8",
     "@babel/plugin-transform-runtime": "^7.13.10",
     "@babel/preset-env": "^7.13.12",
