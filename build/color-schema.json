@@ -265,15 +265,19 @@
       ]
     },
     "HexValue3": {
+      "pattern": "^(#|0x)?[0-9a-fA-F]{3}$",
       "type": "string"
     },
     "HexValue4": {
+      "pattern": "^(#|0x)?[0-9a-fA-F]{4}$",
       "type": "string"
     },
     "HexValue6": {
+      "pattern": "^(#|0x)?[0-9a-fA-F]{6}$",
       "type": "string"
     },
     "HexValue8": {
+      "pattern": "^(#|0x)?[0-9a-fA-F]{8}$",
       "type": "string"
     },
     "MatrixPalette": {
@@ -287,6 +291,9 @@
             "type": "array"
           },
           "type": "array"
+        },
+        "description": {
+          "type": "string"
         },
         "name": {
           "type": "string"
