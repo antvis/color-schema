@@ -1,10 +1,21 @@
 export type ColorSpace = "hex" | "rgb" | "rgba" | "lab" | "cmyk";
 
-export type HexChar = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "a" | "b" | "c" | "d" | "e" | "f";
-export type HexValue3 = string; // `${"#" | "" | "0x"}${HexChar}${HexChar}${HexChar}`;
-export type HexValue6 = string; // Expression produces a union type that is too complex to represent
-export type HexValue4 = string; // Expression produces a union type that is too complex to represent
-export type HexValue8 = string; // Expression produces a union type that is too complex to represent
+/**
+ * @pattern ^(#|0x)?[0-9a-fA-F]{3}$
+*/
+export type HexValue3 = string;
+/**
+ * @pattern ^(#|0x)?[0-9a-fA-F]{6}$
+*/
+export type HexValue6 = string;
+/**
+ * @pattern ^(#|0x)?[0-9a-fA-F]{4}$
+*/
+export type HexValue4 = string;
+/**
+ * @pattern ^(#|0x)?[0-9a-fA-F]{8}$
+*/
+export type HexValue8 = string;
 export type HexValue = HexValue3 | HexValue4 | HexValue6 | HexValue8;
 export interface HexColor {
   space: "hex";
