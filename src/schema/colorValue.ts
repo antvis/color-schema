@@ -2,19 +2,19 @@ export type ColorSpace = "hex" | "rgb" | "rgba" | "lab" | "cmyk";
 
 /**
  * @pattern ^(#|0x)?[0-9a-fA-F]{3}$
-*/
+ */
 export type HexValue3 = string;
 /**
  * @pattern ^(#|0x)?[0-9a-fA-F]{6}$
-*/
+ */
 export type HexValue6 = string;
 /**
  * @pattern ^(#|0x)?[0-9a-fA-F]{4}$
-*/
+ */
 export type HexValue4 = string;
 /**
  * @pattern ^(#|0x)?[0-9a-fA-F]{8}$
-*/
+ */
 export type HexValue8 = string;
 export type HexValue = HexValue3 | HexValue4 | HexValue6 | HexValue8;
 export interface HexColor {
