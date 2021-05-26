@@ -60,6 +60,9 @@
         {
           "additionalProperties": false,
           "properties": {
+            "id": {
+              "type": "string"
+            },
             "name": {
               "type": "string"
             },
@@ -86,6 +89,9 @@
         {
           "additionalProperties": false,
           "properties": {
+            "id": {
+              "type": "string"
+            },
             "name": {
               "type": "string"
             },
@@ -119,6 +125,9 @@
         {
           "additionalProperties": false,
           "properties": {
+            "id": {
+              "type": "string"
+            },
             "location": {
               "maximum": 1,
               "minimum": 0,
@@ -150,6 +159,9 @@
         {
           "additionalProperties": false,
           "properties": {
+            "id": {
+              "type": "string"
+            },
             "location": {
               "maximum": 1,
               "minimum": 0,
