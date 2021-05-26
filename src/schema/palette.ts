@@ -1,9 +1,12 @@
 import { Color, ContinuousColor } from "./color";
 
+// export type ColorMatchingType = "monotone" | "complement" | "analogous" | "triad" | "tetrad" | "customized";
+
 export interface PaletteBaseInfo {
   name: string;
   semantic: string | null;
   description?: string;
+  // colorMatching: ColorMatchingType;
 }
 
 export type PaletteType = "categorical" | "discrete-scale" | "continuous-scale" | "matrix";

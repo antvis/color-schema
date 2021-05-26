@@ -3,6 +3,7 @@ import { ColorValue } from "./colorValue";
 export type Undertone = "warm" | "neutral" | "cool";
 
 export interface ColorBaseInfo {
+  id?: string;
   name?: string;
   undertone?: Undertone;
   usage?: string;
