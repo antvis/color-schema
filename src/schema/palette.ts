@@ -1,6 +1,15 @@
 import { Color, ContinuousColor } from "./color";
 
-export type ColorSchemeType = "monochromatic" | "complementary" | "split-complementary" | "achromatic" | "analogous" | "triad" | "tetradic" | "polychromatic" | "customized";
+export type ColorSchemeType =
+  | "monochromatic"
+  | "complementary"
+  | "split-complementary"
+  | "achromatic"
+  | "analogous"
+  | "triad"
+  | "tetradic"
+  | "polychromatic"
+  | "customized";
 
 export interface PaletteBaseInfo {
   id?: string;
