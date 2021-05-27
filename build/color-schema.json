@@ -24,6 +24,9 @@
     "CategoricalPalette": {
       "additionalProperties": false,
       "properties": {
+        "colorScheme": {
+          "$ref": "#/definitions/ColorSchemeType"
+        },
         "colors": {
           "items": {
             "$ref": "#/definitions/Color"
@@ -31,6 +34,9 @@
           "type": "array"
         },
         "description": {
+          "type": "string"
+        },
+        "id": {
           "type": "string"
         },
         "name": {
@@ -120,6 +126,20 @@
     "ColorSchema": {
       "$ref": "#/definitions/AssetPack"
     },
+    "ColorSchemeType": {
+      "enum": [
+        "monochromatic",
+        "complementary",
+        "split-complementary",
+        "achromatic",
+        "analogous",
+        "triad",
+        "tetradic",
+        "polychromatic",
+        "customized"
+      ],
+      "type": "string"
+    },
     "ContinuousColor": {
       "anyOf": [
         {
@@ -195,6 +215,9 @@
     "ContinuousScalePalette": {
       "additionalProperties": false,
       "properties": {
+        "colorScheme": {
+          "$ref": "#/definitions/ColorSchemeType"
+        },
         "colors": {
           "items": {
             "$ref": "#/definitions/ContinuousColor"
@@ -202,6 +225,9 @@
           "type": "array"
         },
         "description": {
+          "type": "string"
+        },
+        "id": {
           "type": "string"
         },
         "name": {
@@ -229,6 +255,9 @@
     "DiscreteScalePalette": {
       "additionalProperties": false,
       "properties": {
+        "colorScheme": {
+          "$ref": "#/definitions/ColorSchemeType"
+        },
         "colors": {
           "items": {
             "$ref": "#/definitions/Color"
@@ -236,6 +265,9 @@
           "type": "array"
         },
         "description": {
+          "type": "string"
+        },
+        "id": {
           "type": "string"
         },
         "name": {
@@ -295,6 +327,9 @@
     "MatrixPalette": {
       "additionalProperties": false,
       "properties": {
+        "colorScheme": {
+          "$ref": "#/definitions/ColorSchemeType"
+        },
         "colors": {
           "items": {
             "items": {
@@ -305,6 +340,9 @@
           "type": "array"
         },
         "description": {
+          "type": "string"
+        },
+        "id": {
           "type": "string"
         },
         "name": {
