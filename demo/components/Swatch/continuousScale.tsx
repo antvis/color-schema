@@ -22,9 +22,9 @@ const ContinuousScaleSwatch: FC<ContinuousScaleSwatchProps> = ({
 }) => {
   const colorStyle: React.CSSProperties = {};
 
-  const sliceCount = 300;//width Adaptive
+  const sliceCount = 300; // width Adaptive
   const colorScaleFunc = chroma.scale(colors).domain(locations);
-  let colorSclices = new Array(sliceCount).fill(0).map((d, i) => colorScaleFunc(i/sliceCount).hex());
+  const colorSclices = new Array(sliceCount).fill(0).map((d, i) => colorScaleFunc(i / sliceCount).hex());
   return (
     <div
       className={classNames({
@@ -40,19 +40,25 @@ const ContinuousScaleSwatch: FC<ContinuousScaleSwatchProps> = ({
             colorStyle={{
               ...colorStyle,
               maxWidth: `1px`,
-              boxShadow: '0 0 0 0'
+              boxShadow: "0 0 0 0",
             }}
             colors={colorSclices}
             description={description}
             tooltip={(color, i) => (
-              <div className={styles.tooltip}>
-                <div> 
-                  <span>Color: </span>
-                  <span className={styles.block} style={{background: color}}></span>
-                  <span> {color}</span>
+              <div className={styles.continuousTooltip}>
+                <div className={styles.info}>
+                  <div className={styles.property}>Color: </div>
+                  <div className={styles.value}>
+                    <span className={styles.block} style={{ background: color }}></span>
+                    <span> {color}</span>
+                  </div>
                 </div>
-                <span>Location: { Math.round(i*100/sliceCount)+"%" }</span>
-              </div>)}
+                <div className={styles.info}>
+                  <div className={styles.property}>Location:</div>
+                  <div className={styles.value}>{Math.round((i * 100) / sliceCount) + "%"}</div>
+                </div>
+              </div>
+            )}
           />
         </div>
       </div>

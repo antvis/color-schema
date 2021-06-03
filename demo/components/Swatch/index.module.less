@@ -191,6 +191,32 @@
   top: 1px;
 }
 
+.continuousTooltip {
+  color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 12px;
+
+  .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2px 0;
+
+    .property {
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    .value {
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
 @media (max-width: 1280px) {
   .swatch.multiple {
     .colors {
