@@ -6,7 +6,7 @@ export interface ColorBaseInfo {
   id?: string;
   name?: string;
   undertone?: Undertone;
-  usage?: string;
+  usage?: string[];
 }
 
 export type Color = ColorBaseInfo & ColorValue;

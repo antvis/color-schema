@@ -11,19 +11,19 @@
           "value": "#ff0000",
           "name": "red",
           "undertone": "warm",
-          "usage": "danger"
+          "usage": [ "danger", "apple" ]
         },
         {
           "space": "hex",
           "value": "#00ff00",
           "name": "green",
-          "undertone": "neutral"
+          "undertone": [ "neutral" ]
         },
         {
           "space": "hex",
           "value": "#0000ff",
           "name": "blue",
-          "undertone": "cool"
+          "undertone": [ "cool" ]
         }
       ]
     },
@@ -118,29 +118,29 @@
         "x": [
           {
             "space": "hex",
-            "value": "#D7D1FF"
+            "value": "#E5F4FF"
           },
           {
             "space": "hex",
-            "value": "#A0BFFF"
+            "value": "#ABDFFF"
           },
           {
             "space": "hex",
-            "value": "#209FED"
+            "value": "#22BAED"
           }
         ],
         "y": [
           {
             "space": "hex",
-            "value": "#D7D1FF"
+            "value": "#F0DBFF"
           },
           {
             "space": "hex",
-            "value": "#B78DFF"
+            "value": "#CC94FF"
           },
           {
             "space": "hex",
-            "value": "#8B59FF"
+            "value": "#AD63FF"
           }
         ]
       }

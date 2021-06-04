@@ -1,10 +1,10 @@
-<img src="https://gw.alipayobjects.com/zos/antfincdn/R8sN%24GNdh6/language.svg" width="18"> English | [简体中文](./README.zh-CN.md)
+<img src="https://gw.alipayobjects.com/zos/antfincdn/R8sN%24GNdh6/language.svg" width="18"> [English](./README.md) | 简体中文
 
 # color-palette-json-schema
 
-A JSON schema used to regulate semantic color assets or palettes.
+一个用于规范语义化的色彩资产或色板的JSON模式。
 
-## Example
+## 例子
 
 ```js
 {
@@ -104,17 +104,17 @@ A JSON schema used to regulate semantic color assets or palettes.
   <img src="https://gw.alipayobjects.com/zos/antfincdn/OJkRfCvSxN/palettes.png" width="300" />
 </div>
 
-## Installation
+## 安装包
 ```bash
 $ npm install color-schema-test
 ```
 
-## Usage
+## 使用
 
-> Validate data with JSON schema, and develop with types and interfaces.
+> 验证输入的JSON数据是否符合色彩资产的数据结构规范，并可以在开发时使用定义好的类型和接口。
 
-### Validate 
-Validate by [Ajv](https://github.com/ajv-validator/ajv) (JSON schema validator):
+### 验证 
+通过[Ajv](https://github.com/ajv-validator/ajv) (JSON模式验证器) 验证：
 
 ```js
 import Ajv from "ajv";
@@ -127,14 +127,14 @@ const valid = validate(data);
 
 ### Types & Interfaces
 
-Some types and interfaces:
+一些相关类型和接口的描述：
 
 ```js
 import { ColorSchema, Palette, Color } from 'color-schema-test';
 ```
 
 #### ColorSchema
-Color Schema is a color assets package consisting of a collection of palettes.
+颜色模式（Color Schema）是一组色板构成的色彩资产包。
 ```ts
 interface ColorSchema {
   brandName: string;
@@ -143,7 +143,7 @@ interface ColorSchema {
 ```
 
 #### Palette
-Color palette is a collection of colors.
+色板（Palette）包含了一组颜色。
 ```ts
 interface Palette {
   id?: string;
@@ -161,13 +161,13 @@ interface Palette {
 ```
 
 #### PaletteType
-According to different data types and usage scenarios, four different [types](https://antv.vision/en/docs/specification/language/palette#6-%E5%A4%A7%E8%89%B2%E6%9D%BF%E7%B1%BB%E5%9E%8B) of color plates are provided.
+根据不同的数据类型和使用场景，有四种不同的[类型](https://antv.vision/en/docs/specification/language/palette#6-%E5%A4%A7%E8%89%B2%E6%9D%BF%E7%B1%BB%E5%9E%8B)的色板。
 ```ts
 type PaletteType = "categorical" | "discrete-scale" | "continuous-scale" | "matrix";
 ```
 
 #### ColorSchemeType
-[Color scheme](https://en.wikipedia.org/wiki/Color_scheme) is described in terms of logical combinations of colors on a color wheel. Different types of schemes, like monochromatic or complementary, are used.
+配色方案（[Color scheme](https://en.wikipedia.org/wiki/Color_scheme)）是指通过色轮搭配色彩的逻辑。例如单色方案或补色方案等。
 ```ts
 type ColorSchemeType = 
   | "monochromatic"
@@ -182,6 +182,7 @@ type ColorSchemeType =
 ```
 
 #### Color
+颜色
 ```ts
 interface Color {
   space: ColorSpace;
@@ -194,23 +195,25 @@ interface Color {
 ```
 
 #### ColorSpace
+色彩空间
 ```ts
 type ColorSpace = "hex" | "hsl" | "hsv" | "hsi" | "rgb" | "rgba" | "lab" | "lch" | "cmyk";
 ```
 
 #### Undertone
+色调
 ```ts
 type Undertone = "warm" | "neutral" | "cool";
 ```
 
-## Dev
+## 开发
 
 ```bash
 npm install
 npm run start
 ```
 
-## Reference
+## 相关链接
 
 * [Ant Design Colors](https://ant.design/docs/spec/colors)
 * [AntV Color Design](https://antv.vision/en/docs/specification/language/palette)

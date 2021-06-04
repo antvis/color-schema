@@ -80,7 +80,10 @@
               "$ref": "#/definitions/Undertone"
             },
             "usage": {
-              "type": "string"
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
             },
             "value": {
               "$ref": "#/definitions/HexValue"
@@ -109,7 +112,10 @@
               "$ref": "#/definitions/Undertone"
             },
             "usage": {
-              "type": "string"
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
             },
             "value": {
               "$ref": "#/definitions/RGBValue"
@@ -164,7 +170,10 @@
               "$ref": "#/definitions/Undertone"
             },
             "usage": {
-              "type": "string"
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
             },
             "value": {
               "$ref": "#/definitions/HexValue"
@@ -198,7 +207,10 @@
               "$ref": "#/definitions/Undertone"
             },
             "usage": {
-              "type": "string"
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
             },
             "value": {
               "$ref": "#/definitions/RGBValue"
