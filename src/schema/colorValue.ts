@@ -1,4 +1,4 @@
-export type ColorSpace = "hex" | "rgb" | "rgba" | "lab" | "cmyk";
+export type ColorSpace = "hex" | "hsl" | "hsv" | "hsi" | "rgb" | "rgba" | "lab" | "lch" | "cmyk";
 
 /**
  * @pattern ^(#|0x)?[0-9a-fA-F]{3}$

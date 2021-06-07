@@ -6,7 +6,7 @@ export type ColorSchemeType =
   | "split-complementary"
   | "achromatic"
   | "analogous"
-  | "triad"
+  | "triadic"
   | "tetradic"
   | "polychromatic"
   | "customized";
