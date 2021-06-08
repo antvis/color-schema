@@ -18,7 +18,7 @@ import Swatch from "./components/Swatch";
 import classic from "../examples/classic.json";
 import * as antdColors from "../examples/antd-color";
 import antvColor from "../examples/antv-color.json";
-import { colorToHex, matrixToHex } from "./utils";
+import { colorToHex } from "../src";
 
 const examples: Record<string, any> = {
   "Classic Demo": classic,
@@ -222,7 +222,7 @@ export default function App() {
       <div className="palette-assets">
         {validateSchema(examples[exampleName]) ? (
           examples[exampleName].palettes.map((palette: Palette, index: number) => (
-            <div key={`p_${index}`}>
+            <div key={`${palette.name}`}>
               {index === 0 ? null : <p>------</p>}
               <div className="palette-view">
                 <div className="palette-info">

@@ -16,23 +16,23 @@
       type: "categorical",
       colors: [
         {
-          space: "hex",
-          value: "#ff0000",
+          space: "rgb",
+          value: { r: 255, g: 0, b: 0 },
           name: "red",
           undertone: "warm",
           usage: [ "danger", "apple" ]
         },
         {
-          space: "hex",
-          value: "#00ff00",
+          space: "rgb",
+          value: { r: 0, g: 255, b: 0 },
           name: "green",
-          undertone: [ "neutral" ]
+          undertone: "neutral"
         },
         {
-          space: "hex",
-          value: "#0000ff",
+          space: "rgb",
+          value: { r: 0, g: 0, b: 255 },
           name: "blue",
-          undertone: [ "cool" ]
+          undertone: "cool"
         }
       ]
     },
@@ -42,15 +42,15 @@
       type: "discrete-scale",
       description: "Colors of leaves in different seasons.",
       colors: [
-        { space: "hex", value: "#FFEBB0" },
-        { space: "hex", value: "#FFDF80" },
-        { space: "hex", value: "#FACA3E" },
-        { space: "hex", value: "#E6B80B" },
-        { space: "hex", value: "#B5AC23" },
-        { space: "hex", value: "#6A9A48" },
-        { space: "hex", value: "#20876B" },
-        { space: "hex", value: "#06746B" },
-        { space: "hex", value: "#044E48" }
+        { space: "rgb", value: { r: 255, g: 235, b: 176} },
+        { space: "rgb", value: { r: 255, g: 223, b: 128} },
+        { space: "rgb", value: { r: 250, g: 202, b: 62 },
+        { space: "rgb", value: { r: 230, g: 184, b: 1 },
+        { space: "rgb", value: { r: 181, g: 172, b: 35} },
+        { space: "rgb", value: { r: 106, g: 154, b: 72} },
+        { space: "rgb", value: { r: 32, g: 135, b: 107} },
+        { space: "rgb", value: { r: 6, g: 116, b: 107} },
+        { space: "rgb", value: { r: 4, g: 78, b: 72} }
       ]
     },
     {
@@ -58,9 +58,9 @@
       semantic: "passional",
       type: "continuous-scale",
       colors: [
-        { space: "hex", value: "#fff7ec", location: 0 },
-        { space: "hex", value: "#fc8d59", location: 0.2 },
-        { space: "hex", value: "#7f0000", location: 1 }
+        { space: "rgb", value: {r: 255, g: 247, b: 236}, location: 0 },
+        { space: "rgb", value: {r: 252, g: 141, b: 89}, location: 0.2 },
+        { space: "rgb", value: {r: 127, g: 0, b: 0}, location: 1 }
       ]
     },
     {
@@ -69,31 +69,31 @@
       type: "matrix",
       colors: [
         [
-          { space: "hex", value: "#8B59FF" },
-          { space: "hex", value: "#6752FF" },
-          { space: "hex", value: "#1444ED" }
+          { space: "rgb", value: { r: 139, g: 89, b: 255 } },
+          { space: "rgb", value: { r: 103, g: 82, b: 255 } },
+          { space: "rgb", value: { r: 20, g: 68, b: 237 } }
         ],
         [ 
-          { space: "hex", value: "#B78DFF" },
-          { space: "hex", value: "#8881FF" },
-          { space: "hex", value: "#1B6BED" }
+          { space: "rgb", value: { r: 183, g: 141, b: 255 } },
+          { space: "rgb", value: { r: 136, g: 129, b: 255 } },
+          { space: "rgb", value: { r: 27, g: 107, b: 237 } }
         ],
         [
-          { space: "hex", value: "#D7D1FF" },
-          { space: "hex", value: "#A0BFFF" },
-          { space: "hex", value: "#209FED" }
+          { space: "rgb", value: { r: 215, g: 209, b: 255 } },
+          { space: "rgb", value: { r: 160, g: 191, b: 255 } },
+          { space: "rgb", value: { r: 32, g: 159, b: 237 } }
         ]
       ],
       origin: {
         x: [ 
-          { space: "hex", value: "#E5F4FF" },
-          { space: "hex", value: "#ABDFFF" },
-          { space: "hex", value: "#22BAED" }
+          { space: "rgb", value: { r: 215, g: 209, b: 255 } },
+          { space: "rgb", value: { r: 160, g: 191, b: 255 } },
+          { space: "rgb", value: { r: 32, g: 159, b: 237 } }
         ],
         y: [
-          { space: "hex", value: "#F0DBFF" },
-          { space: "hex", value: "#CC94FF" },
-          { space: "hex", value: "#AD63FF" }
+          { space: "rgb", value: { r: 215, g: 209, b: 255 } },
+          { space: "rgb", value: { r: 183, g: 141, b: 255 } },
+          { space: "rgb", value: { r: 139, g: 89, b: 255 } }
         ]
       }
     }
@@ -197,7 +197,7 @@ interface Color {
 #### ColorSpace
 色彩空间
 ```ts
-type ColorSpace = "hex" | "hsl" | "hsv" | "hsi" | "rgb" | "rgba" | "lab" | "lch" | "cmyk";
+type ColorSpace = "hsl" | "hsv" | "hsi" | "rgb" | "rgba" | "lab" | "lch" | "cmyk";
 ```
 
 #### Undertone

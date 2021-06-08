@@ -7,141 +7,94 @@
       "type": "categorical",
       "colors": [
         {
-          "space": "hex",
-          "value": "#5B8FF9",
+          "space": "rgb",
+          "value": {
+            "r": 91,
+            "g": 143,
+            "b": 249
+          },
           "name": "Geek Blue"
         },
         {
-          "space": "hex",
-          "value": "#61DDAA",
+          "space": "rgb",
+          "value": {
+            "r": 97,
+            "g": 221,
+            "b": 170
+          },
           "name": "Cyan"
         },
         {
-          "space": "hex",
-          "value": "#65789B",
+          "space": "rgb",
+          "value": {
+            "r": 101,
+            "g": 120,
+            "b": 155
+          },
           "name": "Grey"
         },
         {
-          "space": "hex",
-          "value": "#F6BD16",
+          "space": "rgb",
+          "value": {
+            "r": 246,
+            "g": 189,
+            "b": 22
+          },
           "name": "Sunrise Yellow"
         },
         {
-          "space": "hex",
-          "value": "#7262fd",
+          "space": "rgb",
+          "value": {
+            "r": 114,
+            "g": 98,
+            "b": 253
+          },
           "name": "Deep Purple"
         },
         {
-          "space": "hex",
-          "value": "#78D3F8",
+          "space": "rgb",
+          "value": {
+            "r": 120,
+            "g": 211,
+            "b": 248
+          },
           "name": "Daybreak Blue"
         },
         {
-          "space": "hex",
-          "value": "#9661BC",
+          "space": "rgb",
+          "value": {
+            "r": 150,
+            "g": 97,
+            "b": 188
+          },
           "name": "Golden Purple"
         },
         {
-          "space": "hex",
-          "value": "#F6903D",
+          "space": "rgb",
+          "value": {
+            "r": 246,
+            "g": 144,
+            "b": 61
+          },
           "name": "Sunset Orange"
         },
         {
-          "space": "hex",
-          "value": "#008685",
+          "space": "rgb",
+          "value": {
+            "r": 0,
+            "g": 134,
+            "b": 133
+          },
           "name": "Dark Green"
         },
         {
-          "space": "hex",
-          "value": "#F08BB4",
+          "space": "rgb",
+          "value": {
+            "r": 240,
+            "g": 139,
+            "b": 180
+          },
           "name": "Magenta"
-        }
-      ]
-    },
-    {
-      "name": "AntV20",
-      "semantic": null,
-      "type": "categorical",
-      "colors": [
-        {
-          "space": "hex",
-          "value": "#5B8FF9"
-        },
-        {
-          "space": "hex",
-          "value": "#CDDDFD"
-        },
-        {
-          "space": "hex",
-          "value": "#61DDAA"
-        },
-        {
-          "space": "hex",
-          "value": "#CDF3E4"
-        },
-        {
-          "space": "hex",
-          "value": "#65789B"
-        },
-        {
-          "space": "hex",
-          "value": "#CED4DE"
-        },
-        {
-          "space": "hex",
-          "value": "#F6BD16"
-        },
-        {
-          "space": "hex",
-          "value": "#FCEBB9"
-        },
-        {
-          "space": "hex",
-          "value": "#7262FD"
-        },
-        {
-          "space": "hex",
-          "value": "#D3CEFD"
-        },
-        {
-          "space": "hex",
-          "value": "#78D3F8"
-        },
-        {
-          "space": "hex",
-          "value": "#D3EEF9"
-        },
-        {
-          "space": "hex",
-          "value": "#9661BC"
-        },
-        {
-          "space": "hex",
-          "value": "#DECFEA"
-        },
-        {
-          "space": "hex",
-          "value": "#F6903D"
-        },
-        {
-          "space": "hex",
-          "value": "#FFE0C7"
-        },
-        {
-          "space": "hex",
-          "value": "#008685"
-        },
-        {
-          "space": "hex",
-          "value": "#BBDEDE"
-        },
-        {
-          "space": "hex",
-          "value": "#F08BB4"
-        },
-        {
-          "space": "hex",
-          "value": "#FFE0ED"
         }
       ]
     },
@@ -151,62 +104,122 @@
       "type": "matrix",
       "colors": [
         [{
-          "space": "hex",
-          "value": "#8B59FF"
+          "space": "rgb",
+          "value": {
+            "r": 139,
+            "g": 89,
+            "b": 255
+          }
         },
         {
-          "space": "hex",
-          "value": "#6752FF"
+          "space": "rgb",
+          "value": {
+            "r": 103,
+            "g": 82,
+            "b": 255
+          }
         },
         {
-          "space": "hex",
-          "value": "#1444ED"
+          "space": "rgb",
+          "value": {
+            "r": 20,
+            "g": 68,
+            "b": 237
+          }
         }],
         [{
-          "space": "hex",
-          "value": "#B78DFF"
+          "space": "rgb",
+          "value": {
+            "r": 183,
+            "g": 141,
+            "b": 255
+          }
         },{
-          "space": "hex",
-          "value": "#8881FF"
+          "space": "rgb",
+          "value": {
+            "r": 136,
+            "g": 129,
+            "b": 255
+          }
         },{
-          "space": "hex",
-          "value": "#1B6BED"
+          "space": "rgb",
+          "value": {
+            "r": 27,
+            "g": 107,
+            "b": 237
+          }
         }],
         [{
-          "space": "hex",
-          "value": "#D7D1FF"
+          "space": "rgb",
+          "value": {
+            "r": 215,
+            "g": 209,
+            "b": 255
+          }
         },{
-          "space": "hex",
-          "value": "#A0BFFF"
+          "space": "rgb",
+          "value": {
+            "r": 160,
+            "g": 191,
+            "b": 255
+          }
         },{
-          "space": "hex",
-          "value": "#209FED"
+          "space": "rgb",
+          "value": {
+            "r": 32,
+            "g": 159,
+            "b": 237
+          }
         }]
       ],
       "origin": {
         "x":[{
-          "space": "hex",
-          "value": "#D7D1FF"
+          "space": "rgb",
+          "value": {
+            "r": 215,
+            "g": 209,
+            "b": 255
+          }
         },
         {
-          "space": "hex",
-          "value": "#A0BFFF"
+          "space": "rgb",
+          "value": {
+            "r": 160,
+            "g": 191,
+            "b": 255
+          }
         },
         {
-          "space": "hex",
-          "value": "#209FED"
+          "space": "rgb",
+          "value": {
+            "r": 32,
+            "g": 159,
+            "b": 237
+          }
         }],
         "y":[{
-          "space": "hex",
-          "value": "#D7D1FF"
+          "space": "rgb",
+          "value": {
+            "r": 215,
+            "g": 209,
+            "b": 255
+          }
         },
         {
-          "space": "hex",
-          "value": "#B78DFF"
+          "space": "rgb",
+          "value": {
+            "r": 183,
+            "g": 141,
+            "b": 255
+          }
         },
         {
-          "space": "hex",
-          "value": "#8B59FF"
+          "space": "rgb",
+          "value": {
+            "r": 139,
+            "g": 89,
+            "b": 255
+          }
         }]
       }
     }
