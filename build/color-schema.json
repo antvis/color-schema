@@ -21,6 +21,38 @@
       ],
       "type": "object"
     },
+    "CMYKValue": {
+      "additionalProperties": false,
+      "properties": {
+        "c": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "k": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "m": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "y": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "c",
+        "m",
+        "y",
+        "k"
+      ],
+      "type": "object"
+    },
     "CategoricalPalette": {
       "additionalProperties": false,
       "properties": {
@@ -73,7 +105,7 @@
               "type": "string"
             },
             "space": {
-              "const": "hex",
+              "const": "hsl",
               "type": "string"
             },
             "undertone": {
@@ -86,7 +118,71 @@
               "type": "array"
             },
             "value": {
-              "$ref": "#/definitions/HexValue"
+              "$ref": "#/definitions/HSLValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "hsv",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "value": {
+              "$ref": "#/definitions/HSVValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "hsi",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "value": {
+              "$ref": "#/definitions/HSIValue"
             }
           },
           "required": [
@@ -119,6 +215,134 @@
             },
             "value": {
               "$ref": "#/definitions/RGBValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "rgba",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "value": {
+              "$ref": "#/definitions/RGBAValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "lab",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "value": {
+              "$ref": "#/definitions/LABValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "lch",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "value": {
+              "$ref": "#/definitions/LCHValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "cmyk",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "value": {
+              "$ref": "#/definitions/CMYKValue"
             }
           },
           "required": [
@@ -163,7 +387,7 @@
               "type": "string"
             },
             "space": {
-              "const": "hex",
+              "const": "hsl",
               "type": "string"
             },
             "undertone": {
@@ -176,7 +400,81 @@
               "type": "array"
             },
             "value": {
-              "$ref": "#/definitions/HexValue"
+              "$ref": "#/definitions/HSLValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "location": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "hsv",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "value": {
+              "$ref": "#/definitions/HSVValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "location": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "hsi",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "value": {
+              "$ref": "#/definitions/HSIValue"
             }
           },
           "required": [
@@ -214,6 +512,154 @@
             },
             "value": {
               "$ref": "#/definitions/RGBValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "location": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "rgba",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "value": {
+              "$ref": "#/definitions/RGBAValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "location": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "lab",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "value": {
+              "$ref": "#/definitions/LABValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "location": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "lch",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "value": {
+              "$ref": "#/definitions/LCHValue"
+            }
+          },
+          "required": [
+            "space",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "location": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "name": {
+              "type": "string"
+            },
+            "space": {
+              "const": "cmyk",
+              "type": "string"
+            },
+            "undertone": {
+              "$ref": "#/definitions/Undertone"
+            },
+            "usage": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "value": {
+              "$ref": "#/definitions/CMYKValue"
             }
           },
           "required": [
@@ -304,37 +750,135 @@
       ],
       "type": "object"
     },
-    "HexValue": {
-      "anyOf": [
-        {
-          "$ref": "#/definitions/HexValue3"
+    "HSIValue": {
+      "additionalProperties": false,
+      "properties": {
+        "h": {
+          "maximum": 360,
+          "minimum": 0,
+          "type": "number"
         },
-        {
-          "$ref": "#/definitions/HexValue4"
+        "i": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
         },
-        {
-          "$ref": "#/definitions/HexValue6"
-        },
-        {
-          "$ref": "#/definitions/HexValue8"
+        "s": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
         }
-      ]
+      },
+      "required": [
+        "h",
+        "s",
+        "i"
+      ],
+      "type": "object"
     },
-    "HexValue3": {
-      "pattern": "^(#|0x)?[0-9a-fA-F]{3}$",
-      "type": "string"
+    "HSLValue": {
+      "additionalProperties": false,
+      "properties": {
+        "h": {
+          "maximum": 360,
+          "minimum": 0,
+          "type": "number"
+        },
+        "l": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "s": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "h",
+        "s",
+        "l"
+      ],
+      "type": "object"
     },
-    "HexValue4": {
-      "pattern": "^(#|0x)?[0-9a-fA-F]{4}$",
-      "type": "string"
+    "HSVValue": {
+      "additionalProperties": false,
+      "properties": {
+        "h": {
+          "maximum": 360,
+          "minimum": 0,
+          "type": "number"
+        },
+        "s": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "v": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "h",
+        "s",
+        "v"
+      ],
+      "type": "object"
     },
-    "HexValue6": {
-      "pattern": "^(#|0x)?[0-9a-fA-F]{6}$",
-      "type": "string"
+    "LABValue": {
+      "additionalProperties": false,
+      "properties": {
+        "a": {
+          "maximum": 98.254,
+          "minimum": -86.185,
+          "type": "number"
+        },
+        "b": {
+          "maximum": 94.482,
+          "minimum": -107.863,
+          "type": "number"
+        },
+        "l": {
+          "maximum": 100,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "l",
+        "a",
+        "b"
+      ],
+      "type": "object"
     },
-    "HexValue8": {
-      "pattern": "^(#|0x)?[0-9a-fA-F]{8}$",
-      "type": "string"
+    "LCHValue": {
+      "additionalProperties": false,
+      "properties": {
+        "c": {
+          "maximum": 100,
+          "minimum": 0,
+          "type": "number"
+        },
+        "h": {
+          "maximum": 360,
+          "minimum": 0,
+          "type": "number"
+        },
+        "l": {
+          "maximum": 100,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "l",
+        "c",
+        "h"
+      ],
+      "type": "object"
     },
     "MatrixPalette": {
       "additionalProperties": false,
@@ -418,16 +962,54 @@
         }
       ]
     },
+    "RGBAValue": {
+      "additionalProperties": false,
+      "properties": {
+        "a": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "b": {
+          "maximum": 255,
+          "minimum": 0,
+          "type": "number"
+        },
+        "g": {
+          "maximum": 255,
+          "minimum": 0,
+          "type": "number"
+        },
+        "r": {
+          "maximum": 255,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "r",
+        "g",
+        "b",
+        "a"
+      ],
+      "type": "object"
+    },
     "RGBValue": {
       "additionalProperties": false,
       "properties": {
         "b": {
+          "maximum": 255,
+          "minimum": 0,
           "type": "number"
         },
         "g": {
+          "maximum": 255,
+          "minimum": 0,
           "type": "number"
         },
         "r": {
+          "maximum": 255,
+          "minimum": 0,
           "type": "number"
         }
       },
