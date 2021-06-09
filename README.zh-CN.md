@@ -51,7 +51,8 @@
         { space: "rgb", value: { r: 32, g: 135, b: 107} },
         { space: "rgb", value: { r: 6, g: 116, b: 107} },
         { space: "rgb", value: { r: 4, g: 78, b: 72} }
-      ]
+      ],
+      "usage": ["visualization"]
     },
     {
       name: "scale3",
@@ -152,6 +153,7 @@ interface Palette {
   semantic: string | null;
   description?: string;
   colorScheme?: ColorSchemeType;
+  usage?: string[];
   colors: Color[] | ContinuousColor[] | colors: Color[][];
   origin?: {
     x: Color[];
@@ -190,7 +192,7 @@ interface Color {
   id?: string;
   name?: string;
   undertone?: Undertone;
-  usage?: string;
+  usage?: string[];
 }
 ```
 

@@ -25,7 +25,8 @@
           "name": "blue",
           "undertone": "cool"
         }
-      ]
+      ],
+      "usage": ["highlight"]
     },
     {
       "name": "scale1",
@@ -37,7 +38,8 @@
         { "space": "rgb", "value": {"r": 252, "g": 141, "b": 89} },
         { "space": "rgb", "value": {"r": 215, "g": 48, "b": 31} },
         { "space": "rgb", "value": {"r": 127, "g": 0, "b": 0} }
-      ]
+      ],
+      "usage": ["visualization"]
     },
     {
       "name": "Leaf Yellow",

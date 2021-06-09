@@ -17,6 +17,7 @@ export interface PaletteBaseInfo {
   semantic: string | null;
   description?: string;
   colorScheme?: ColorSchemeType;
+  usage?: string[];
 }
 
 export type PaletteType = "categorical" | "discrete-scale" | "continuous-scale" | "matrix";

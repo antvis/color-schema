@@ -83,6 +83,12 @@
         "type": {
           "const": "categorical",
           "type": "string"
+        },
+        "usage": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
         }
       },
       "required": [
@@ -700,6 +706,12 @@
         "type": {
           "const": "continuous-scale",
           "type": "string"
+        },
+        "usage": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
         }
       },
       "required": [
@@ -740,6 +752,12 @@
         "type": {
           "const": "discrete-scale",
           "type": "string"
+        },
+        "usage": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
         }
       },
       "required": [
@@ -935,6 +953,12 @@
         "type": {
           "const": "matrix",
           "type": "string"
+        },
+        "usage": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
         }
       },
       "required": [
