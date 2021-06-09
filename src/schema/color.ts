@@ -1,5 +1,5 @@
 import { ColorValue } from "./colorValue";
-import chroma from "chroma-js";
+import chroma, { Color as ChromaColor } from "chroma-js";
 
 export type Undertone = "warm" | "neutral" | "cool";
 
@@ -20,19 +20,18 @@ export type ContinuousColor = Color & {
   location?: number;
 };
 
-function isVaildKey(key: string, object: object): key is keyof typeof object {
-  return key in object;
-}
+const isChromaColor = (color: any): color is ChromaColor => {
+  if (chroma.valid(color)) {
+    return true;
+  }
+  return false;
+};
 
 export function colorToHex(color: Color): string {
-  const { space, value } = color;
+  const { value } = color;
 
-  if (chroma.valid(value)) {
-    const dimension = space.split("");
-    const values = dimension.map((d) => (isVaildKey(d, value) ? value[d] : 0));
-    return (
-      space !== "rgba" ? chroma(...(values as []), space) : chroma(...(values as [number, number, number, number]))
-    ).hex();
+  if (isChromaColor(value)) {
+    return chroma(value).hex();
   }
 
   return "";
