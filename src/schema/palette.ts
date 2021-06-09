@@ -46,22 +46,22 @@ export type MatrixPalette = PaletteBaseInfo & {
 };
 
 export function isCategoricalPalette(palette: Palette): palette is CategoricalPalette {
-  if (palette.type === 'categorical') return true;
+  if (palette.type === "categorical") return true;
   return false;
 }
 
 export function isDiscreteScalePalette(palette: Palette): palette is DiscreteScalePalette {
-  if (palette.type === 'discrete-scale') return true;
+  if (palette.type === "discrete-scale") return true;
   return false;
 }
 
 export function isContinuousPalette(palette: Palette): palette is ContinuousScalePalette {
-  if (palette.type === 'continuous-scale') return true;
+  if (palette.type === "continuous-scale") return true;
   return false;
 }
 
 export function isMatrixPalette(palette: Palette): palette is MatrixPalette {
-  if (palette.type === 'matrix') return true;
+  if (palette.type === "matrix") return true;
   return false;
 }
 

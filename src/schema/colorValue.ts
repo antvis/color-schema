@@ -23,7 +23,7 @@ export const HSLValueRange: Record<keyof HSLValue, range> = {
   h: [0, 360],
   s: [0, 1],
   l: [0, 1],
-}
+};
 
 export interface HSLColor {
   space: "hsl";
@@ -52,7 +52,7 @@ export const HSVValueRange: Record<keyof HSVValue, range> = {
   h: [0, 360],
   s: [0, 1],
   v: [0, 1],
-}
+};
 
 export interface HSVColor {
   space: "hsv";
@@ -81,7 +81,7 @@ export const HSIValueRange: Record<keyof HSIValue, range> = {
   h: [0, 360],
   s: [0, 1],
   i: [0, 1],
-}
+};
 
 export interface HSIColor {
   space: "hsi";
@@ -110,7 +110,7 @@ export const RGBValueRange: Record<keyof RGBValue, range> = {
   r: [0, 255],
   g: [0, 255],
   b: [0, 255],
-}
+};
 
 export interface RGBColor {
   space: "rgb";
@@ -144,8 +144,8 @@ export const RGBAValueRange: Record<keyof RGBAValue, range> = {
   r: [0, 255],
   g: [0, 255],
   b: [0, 255],
-  a: [0, 1]
-}
+  a: [0, 1],
+};
 
 export interface RGBAColor {
   space: "rgba";
@@ -174,7 +174,7 @@ export const LABRange: Record<keyof LABValue, range> = {
   l: [0, 100],
   a: [-86.185, 98.254],
   b: [-107.863, 94.482],
-}
+};
 
 export interface LABColor {
   space: "lab";
@@ -203,7 +203,7 @@ export const LCHRange: Record<keyof LCHValue, range> = {
   l: [0, 100],
   c: [0, 100],
   h: [0, 360],
-}
+};
 
 export interface LCHColor {
   space: "lch";
@@ -238,7 +238,7 @@ export const CMYKRange: Record<keyof CMYKValue, range> = {
   m: [0, 1],
   y: [0, 1],
   k: [0, 1],
-}
+};
 
 export interface CMYKColor {
   space: "cmyk";
@@ -257,17 +257,17 @@ export const ColorSpaceRange: Record<ColorSpace, ColorSpaceInfo> = {
   hsl: HSLValueRange,
   hsv: HSVValueRange,
   hsi: HSIValueRange,
-  cmyk: CMYKRange
+  cmyk: CMYKRange,
 };
 
 export function isColorValue(colorValue: ColorValue): colorValue is ColorValue {
   const { space, value } = colorValue;
   const colorSpaceRange = ColorSpaceRange[space];
-  
+
   return (
-    Object.keys(value).sort().join(",") === Object.keys(colorSpaceRange).sort().join(",") && 
+    Object.keys(value).sort().join(",") === Object.keys(colorSpaceRange).sort().join(",") &&
     Object.entries(value).every(([key, v]) => v >= colorSpaceRange[key][0] && v <= colorSpaceRange[key][1])
-  )
+  );
 }
 
 export type ColorValue = HSLColor | HSVColor | HSIColor | RGBColor | RGBAColor | LABColor | LCHColor | CMYKColor;

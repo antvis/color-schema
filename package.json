@@ -1,6 +1,6 @@
 {
   "name": "color-schema-test",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "JSON Schema for Color Palette",
   "main": "lib/src/index.js",
   "types": "lib/src/index.d.ts",

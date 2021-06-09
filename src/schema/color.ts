@@ -20,17 +20,17 @@ export type ContinuousColor = Color & {
   location?: number;
 };
 
-function isVaildKey(key: string, object: object): key is keyof typeof object{
+function isVaildKey(key: string, object: object): key is keyof typeof object {
   return key in object;
 }
 
 export function colorToHex(color: Color): string {
   const { space, value } = color;
 
-  if(chroma.valid(value)) {
+  if (chroma.valid(value)) {
     const dimension = space.split("");
-    const values = dimension.map((d) => isVaildKey(d, value) ? value[d] : 0);
-    return chroma(...values as [], space).hex();
+    const values = dimension.map((d) => (isVaildKey(d, value) ? value[d] : 0));
+    return chroma(...(values as []), space).hex();
   }
 
   return "";
