@@ -30,7 +30,9 @@ export function colorToHex(color: Color): string {
   if (chroma.valid(value)) {
     const dimension = space.split("");
     const values = dimension.map((d) => (isVaildKey(d, value) ? value[d] : 0));
-    return chroma(...(values as []), space).hex();
+    return (
+      space !== "rgba" ? chroma(...(values as []), space) : chroma(...(values as [number, number, number, number]))
+    ).hex();
   }
 
   return "";
