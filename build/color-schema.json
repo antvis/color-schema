@@ -107,11 +107,11 @@
             "id": {
               "type": "string"
             },
-            "name": {
+            "model": {
+              "const": "hsl",
               "type": "string"
             },
-            "space": {
-              "const": "hsl",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -128,7 +128,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
@@ -139,11 +139,11 @@
             "id": {
               "type": "string"
             },
-            "name": {
+            "model": {
+              "const": "hsv",
               "type": "string"
             },
-            "space": {
-              "const": "hsv",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -160,7 +160,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
@@ -171,11 +171,11 @@
             "id": {
               "type": "string"
             },
-            "name": {
+            "model": {
+              "const": "hsi",
               "type": "string"
             },
-            "space": {
-              "const": "hsi",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -192,7 +192,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
@@ -203,11 +203,11 @@
             "id": {
               "type": "string"
             },
-            "name": {
+            "model": {
+              "const": "rgb",
               "type": "string"
             },
-            "space": {
-              "const": "rgb",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -224,7 +224,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
@@ -235,11 +235,11 @@
             "id": {
               "type": "string"
             },
-            "name": {
+            "model": {
+              "const": "rgba",
               "type": "string"
             },
-            "space": {
-              "const": "rgba",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -256,7 +256,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
@@ -267,11 +267,11 @@
             "id": {
               "type": "string"
             },
-            "name": {
+            "model": {
+              "const": "lab",
               "type": "string"
             },
-            "space": {
-              "const": "lab",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -288,7 +288,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
@@ -299,11 +299,11 @@
             "id": {
               "type": "string"
             },
-            "name": {
+            "model": {
+              "const": "lch",
               "type": "string"
             },
-            "space": {
-              "const": "lch",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -320,7 +320,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
@@ -331,11 +331,11 @@
             "id": {
               "type": "string"
             },
-            "name": {
+            "model": {
+              "const": "cmyk",
               "type": "string"
             },
-            "space": {
-              "const": "cmyk",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -352,7 +352,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
@@ -389,11 +389,11 @@
               "minimum": 0,
               "type": "number"
             },
-            "name": {
+            "model": {
+              "const": "hsl",
               "type": "string"
             },
-            "space": {
-              "const": "hsl",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -410,7 +410,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
@@ -426,11 +426,11 @@
               "minimum": 0,
               "type": "number"
             },
-            "name": {
+            "model": {
+              "const": "hsv",
               "type": "string"
             },
-            "space": {
-              "const": "hsv",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -447,7 +447,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
@@ -463,11 +463,11 @@
               "minimum": 0,
               "type": "number"
             },
-            "name": {
+            "model": {
+              "const": "hsi",
               "type": "string"
             },
-            "space": {
-              "const": "hsi",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -484,7 +484,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
@@ -500,11 +500,11 @@
               "minimum": 0,
               "type": "number"
             },
-            "name": {
+            "model": {
+              "const": "rgb",
               "type": "string"
             },
-            "space": {
-              "const": "rgb",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -521,7 +521,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
@@ -537,11 +537,11 @@
               "minimum": 0,
               "type": "number"
             },
-            "name": {
+            "model": {
+              "const": "rgba",
               "type": "string"
             },
-            "space": {
-              "const": "rgba",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -558,7 +558,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
@@ -574,11 +574,11 @@
               "minimum": 0,
               "type": "number"
             },
-            "name": {
+            "model": {
+              "const": "lab",
               "type": "string"
             },
-            "space": {
-              "const": "lab",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -595,7 +595,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
@@ -611,11 +611,11 @@
               "minimum": 0,
               "type": "number"
             },
-            "name": {
+            "model": {
+              "const": "lch",
               "type": "string"
             },
-            "space": {
-              "const": "lch",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -632,7 +632,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
@@ -648,11 +648,11 @@
               "minimum": 0,
               "type": "number"
             },
-            "name": {
+            "model": {
+              "const": "cmyk",
               "type": "string"
             },
-            "space": {
-              "const": "cmyk",
+            "name": {
               "type": "string"
             },
             "undertone": {
@@ -669,7 +669,7 @@
             }
           },
           "required": [
-            "space",
+            "model",
             "value"
           ],
           "type": "object"
