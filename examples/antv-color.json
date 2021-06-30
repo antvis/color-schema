@@ -7,7 +7,7 @@
       "type": "categorical",
       "colors": [
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 91,
             "g": 143,
@@ -16,7 +16,7 @@
           "name": "Geek Blue"
         },
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 97,
             "g": 221,
@@ -25,7 +25,7 @@
           "name": "Cyan"
         },
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 101,
             "g": 120,
@@ -34,7 +34,7 @@
           "name": "Grey"
         },
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 246,
             "g": 189,
@@ -43,7 +43,7 @@
           "name": "Sunrise Yellow"
         },
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 114,
             "g": 98,
@@ -52,7 +52,7 @@
           "name": "Deep Purple"
         },
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 120,
             "g": 211,
@@ -61,7 +61,7 @@
           "name": "Daybreak Blue"
         },
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 150,
             "g": 97,
@@ -70,7 +70,7 @@
           "name": "Golden Purple"
         },
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 246,
             "g": 144,
@@ -79,7 +79,7 @@
           "name": "Sunset Orange"
         },
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 0,
             "g": 134,
@@ -88,7 +88,7 @@
           "name": "Dark Green"
         },
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 240,
             "g": 139,
@@ -104,7 +104,7 @@
       "type": "matrix",
       "colors": [
         [{
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 139,
             "g": 89,
@@ -112,7 +112,7 @@
           }
         },
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 103,
             "g": 82,
@@ -120,7 +120,7 @@
           }
         },
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 20,
             "g": 68,
@@ -128,21 +128,21 @@
           }
         }],
         [{
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 183,
             "g": 141,
             "b": 255
           }
         },{
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 136,
             "g": 129,
             "b": 255
           }
         },{
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 27,
             "g": 107,
@@ -150,21 +150,21 @@
           }
         }],
         [{
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 215,
             "g": 209,
             "b": 255
           }
         },{
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 160,
             "g": 191,
             "b": 255
           }
         },{
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 32,
             "g": 159,
@@ -174,7 +174,7 @@
       ],
       "origin": {
         "x":[{
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 215,
             "g": 209,
@@ -182,7 +182,7 @@
           }
         },
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 160,
             "g": 191,
@@ -190,7 +190,7 @@
           }
         },
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 32,
             "g": 159,
@@ -198,7 +198,7 @@
           }
         }],
         "y":[{
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 215,
             "g": 209,
@@ -206,7 +206,7 @@
           }
         },
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 183,
             "g": 141,
@@ -214,7 +214,7 @@
           }
         },
         {
-          "space": "rgb",
+          "model": "rgb",
           "value": {
             "r": 139,
             "g": 89,

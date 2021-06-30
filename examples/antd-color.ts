@@ -7,7 +7,7 @@ export const product = {
       type: "categorical",
       colors: [
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 24,
             g: 144,
@@ -17,7 +17,7 @@ export const product = {
           undertone: "cool",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 230,
             g: 247,
@@ -27,7 +27,7 @@ export const product = {
           undertone: "cool",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 64,
             g: 169,
@@ -37,7 +37,7 @@ export const product = {
           undertone: "cool",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 24,
             g: 144,
@@ -47,7 +47,7 @@ export const product = {
           undertone: "cool",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 9,
             g: 109,
@@ -64,7 +64,7 @@ export const product = {
       type: "categorical",
       colors: [
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 24,
             g: 144,
@@ -74,7 +74,7 @@ export const product = {
           undertone: "cool",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 82,
             g: 196,
@@ -84,7 +84,7 @@ export const product = {
           undertone: "neutral",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 250,
             g: 173,
@@ -94,7 +94,7 @@ export const product = {
           undertone: "warm",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 77,
@@ -111,7 +111,7 @@ export const product = {
       type: "categorical",
       colors: [
         {
-          space: "rgba",
+          model: "rgba",
           value: {
             r: 0,
             g: 0,
@@ -122,7 +122,7 @@ export const product = {
           undertone: "neutral",
         },
         {
-          space: "rgba",
+          model: "rgba",
           value: {
             r: 0,
             g: 0,
@@ -133,7 +133,7 @@ export const product = {
           undertone: "neutral",
         },
         {
-          space: "rgba",
+          model: "rgba",
           value: {
             r: 0,
             g: 0,
@@ -144,7 +144,7 @@ export const product = {
           undertone: "neutral",
         },
         {
-          space: "rgba",
+          model: "rgba",
           value: {
             r: 0,
             g: 0,
@@ -155,7 +155,7 @@ export const product = {
           undertone: "neutral",
         },
         {
-          space: "rgba",
+          model: "rgba",
           value: {
             r: 0,
             g: 0,
@@ -166,7 +166,7 @@ export const product = {
           undertone: "neutral",
         },
         {
-          space: "rgba",
+          model: "rgba",
           value: {
             r: 0,
             g: 0,
@@ -177,7 +177,7 @@ export const product = {
           undertone: "neutral",
         },
         {
-          space: "rgba",
+          model: "rgba",
           value: {
             r: 0,
             g: 0,
@@ -188,7 +188,7 @@ export const product = {
           undertone: "neutral",
         },
         {
-          space: "rgba",
+          model: "rgba",
           value: {
             r: 0,
             g: 0,
@@ -212,7 +212,7 @@ export const basic = {
       type: "discrete-scale",
       colors: [
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 241,
@@ -221,7 +221,7 @@ export const basic = {
           name: "red-1",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 204,
@@ -230,7 +230,7 @@ export const basic = {
           name: "red-2",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 163,
@@ -239,7 +239,7 @@ export const basic = {
           name: "red-3",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 120,
@@ -248,7 +248,7 @@ export const basic = {
           name: "red-4",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 77,
@@ -257,7 +257,7 @@ export const basic = {
           name: "red-5",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 245,
             g: 34,
@@ -266,7 +266,7 @@ export const basic = {
           name: "red-6",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 207,
             g: 19,
@@ -275,7 +275,7 @@ export const basic = {
           name: "red-7",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 168,
             g: 7,
@@ -284,7 +284,7 @@ export const basic = {
           name: "red-8",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 130,
             g: 0,
@@ -293,7 +293,7 @@ export const basic = {
           name: "red-9",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 92,
             g: 0,
@@ -309,7 +309,7 @@ export const basic = {
       type: "discrete-scale",
       colors: [
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 242,
@@ -318,7 +318,7 @@ export const basic = {
           name: "volcano-1",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 216,
@@ -327,7 +327,7 @@ export const basic = {
           name: "volcano-2",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 187,
@@ -336,7 +336,7 @@ export const basic = {
           name: "volcano-3",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 156,
@@ -345,7 +345,7 @@ export const basic = {
           name: "volcano-4",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 122,
@@ -354,7 +354,7 @@ export const basic = {
           name: "volcano-5",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 250,
             g: 84,
@@ -363,7 +363,7 @@ export const basic = {
           name: "volcano-6",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 212,
             g: 56,
@@ -372,7 +372,7 @@ export const basic = {
           name: "volcano-7",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 173,
             g: 33,
@@ -381,7 +381,7 @@ export const basic = {
           name: "volcano-8",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 135,
             g: 20,
@@ -390,7 +390,7 @@ export const basic = {
           name: "volcano-9",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 97,
             g: 11,
@@ -406,7 +406,7 @@ export const basic = {
       type: "discrete-scale",
       colors: [
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 247,
@@ -415,7 +415,7 @@ export const basic = {
           name: "orange-1",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 231,
@@ -424,7 +424,7 @@ export const basic = {
           name: "orange-2",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 213,
@@ -433,7 +433,7 @@ export const basic = {
           name: "orange-3",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 192,
@@ -442,7 +442,7 @@ export const basic = {
           name: "orange-4",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 169,
@@ -451,7 +451,7 @@ export const basic = {
           name: "orange-5",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 250,
             g: 140,
@@ -460,7 +460,7 @@ export const basic = {
           name: "orange-6",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 212,
             g: 107,
@@ -469,7 +469,7 @@ export const basic = {
           name: "orange-7",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 173,
             g: 78,
@@ -478,7 +478,7 @@ export const basic = {
           name: "orange-8",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 135,
             g: 56,
@@ -487,7 +487,7 @@ export const basic = {
           name: "orange-9",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 97,
             g: 37,
@@ -503,7 +503,7 @@ export const basic = {
       type: "discrete-scale",
       colors: [
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 251,
@@ -512,7 +512,7 @@ export const basic = {
           name: "gold-1",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 241,
@@ -521,7 +521,7 @@ export const basic = {
           name: "gold-2",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 229,
@@ -530,7 +530,7 @@ export const basic = {
           name: "gold-3",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 214,
@@ -539,7 +539,7 @@ export const basic = {
           name: "gold-4",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 197,
@@ -548,7 +548,7 @@ export const basic = {
           name: "gold-5",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 250,
             g: 173,
@@ -557,7 +557,7 @@ export const basic = {
           name: "gold-6",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 212,
             g: 136,
@@ -566,7 +566,7 @@ export const basic = {
           name: "gold-7",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 173,
             g: 104,
@@ -575,7 +575,7 @@ export const basic = {
           name: "gold-8",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 135,
             g: 77,
@@ -584,7 +584,7 @@ export const basic = {
           name: "gold-9",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 97,
             g: 52,
@@ -600,7 +600,7 @@ export const basic = {
       type: "discrete-scale",
       colors: [
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 254,
             g: 255,
@@ -609,7 +609,7 @@ export const basic = {
           name: "yellow-1",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 255,
@@ -618,7 +618,7 @@ export const basic = {
           name: "yellow-2",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 251,
@@ -627,7 +627,7 @@ export const basic = {
           name: "yellow-3",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 245,
@@ -636,7 +636,7 @@ export const basic = {
           name: "yellow-4",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 236,
@@ -645,7 +645,7 @@ export const basic = {
           name: "yellow-5",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 250,
             g: 219,
@@ -654,7 +654,7 @@ export const basic = {
           name: "yellow-6",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 212,
             g: 177,
@@ -663,7 +663,7 @@ export const basic = {
           name: "yellow-7",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 173,
             g: 139,
@@ -672,7 +672,7 @@ export const basic = {
           name: "yellow-8",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 135,
             g: 104,
@@ -681,7 +681,7 @@ export const basic = {
           name: "yellow-9",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 97,
             g: 71,
@@ -697,7 +697,7 @@ export const basic = {
       type: "discrete-scale",
       colors: [
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 252,
             g: 255,
@@ -706,7 +706,7 @@ export const basic = {
           name: "lime-1",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 244,
             g: 255,
@@ -715,7 +715,7 @@ export const basic = {
           name: "lime-2",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 234,
             g: 255,
@@ -724,7 +724,7 @@ export const basic = {
           name: "lime-3",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 211,
             g: 242,
@@ -733,7 +733,7 @@ export const basic = {
           name: "lime-4",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 186,
             g: 230,
@@ -742,7 +742,7 @@ export const basic = {
           name: "lime-5",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 160,
             g: 217,
@@ -751,7 +751,7 @@ export const basic = {
           name: "lime-6",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 124,
             g: 179,
@@ -760,7 +760,7 @@ export const basic = {
           name: "lime-7",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 91,
             g: 140,
@@ -769,7 +769,7 @@ export const basic = {
           name: "lime-8",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 63,
             g: 102,
@@ -778,7 +778,7 @@ export const basic = {
           name: "lime-9",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 37,
             g: 64,
@@ -794,7 +794,7 @@ export const basic = {
       type: "discrete-scale",
       colors: [
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 246,
             g: 255,
@@ -803,7 +803,7 @@ export const basic = {
           name: "green-1",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 217,
             g: 247,
@@ -812,7 +812,7 @@ export const basic = {
           name: "green-2",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 183,
             g: 235,
@@ -821,7 +821,7 @@ export const basic = {
           name: "green-3",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 149,
             g: 222,
@@ -830,7 +830,7 @@ export const basic = {
           name: "green-4",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 115,
             g: 209,
@@ -839,7 +839,7 @@ export const basic = {
           name: "green-5",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 82,
             g: 196,
@@ -848,7 +848,7 @@ export const basic = {
           name: "green-6",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 56,
             g: 158,
@@ -857,7 +857,7 @@ export const basic = {
           name: "green-7",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 35,
             g: 120,
@@ -866,7 +866,7 @@ export const basic = {
           name: "green-8",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 19,
             g: 82,
@@ -875,7 +875,7 @@ export const basic = {
           name: "green-9",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 9,
             g: 43,
@@ -891,7 +891,7 @@ export const basic = {
       type: "discrete-scale",
       colors: [
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 230,
             g: 255,
@@ -900,7 +900,7 @@ export const basic = {
           name: "cyan-1",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 181,
             g: 245,
@@ -909,7 +909,7 @@ export const basic = {
           name: "cyan-2",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 135,
             g: 232,
@@ -918,7 +918,7 @@ export const basic = {
           name: "cyan-3",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 92,
             g: 219,
@@ -927,7 +927,7 @@ export const basic = {
           name: "cyan-4",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 54,
             g: 207,
@@ -936,7 +936,7 @@ export const basic = {
           name: "cyan-5",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 19,
             g: 194,
@@ -945,7 +945,7 @@ export const basic = {
           name: "cyan-6",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 8,
             g: 151,
@@ -954,7 +954,7 @@ export const basic = {
           name: "cyan-7",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 0,
             g: 109,
@@ -963,7 +963,7 @@ export const basic = {
           name: "cyan-8",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 0,
             g: 71,
@@ -972,7 +972,7 @@ export const basic = {
           name: "cyan-9",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 0,
             g: 35,
@@ -988,7 +988,7 @@ export const basic = {
       type: "discrete-scale",
       colors: [
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 230,
             g: 247,
@@ -997,7 +997,7 @@ export const basic = {
           name: "blue-1",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 186,
             g: 231,
@@ -1006,7 +1006,7 @@ export const basic = {
           name: "blue-2",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 145,
             g: 213,
@@ -1015,7 +1015,7 @@ export const basic = {
           name: "blue-3",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 105,
             g: 192,
@@ -1024,7 +1024,7 @@ export const basic = {
           name: "blue-4",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 64,
             g: 169,
@@ -1033,7 +1033,7 @@ export const basic = {
           name: "blue-5",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 24,
             g: 144,
@@ -1042,7 +1042,7 @@ export const basic = {
           name: "blue-6",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 9,
             g: 109,
@@ -1051,7 +1051,7 @@ export const basic = {
           name: "blue-7",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 0,
             g: 80,
@@ -1060,7 +1060,7 @@ export const basic = {
           name: "blue-8",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 0,
             g: 58,
@@ -1069,7 +1069,7 @@ export const basic = {
           name: "blue-9",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 0,
             g: 39,
@@ -1085,7 +1085,7 @@ export const basic = {
       type: "discrete-scale",
       colors: [
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 240,
             g: 245,
@@ -1094,7 +1094,7 @@ export const basic = {
           name: "geekblue-1",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 214,
             g: 228,
@@ -1103,7 +1103,7 @@ export const basic = {
           name: "geekblue-2",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 173,
             g: 198,
@@ -1112,7 +1112,7 @@ export const basic = {
           name: "geekblue-3",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 133,
             g: 165,
@@ -1121,7 +1121,7 @@ export const basic = {
           name: "geekblue-4",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 89,
             g: 126,
@@ -1130,7 +1130,7 @@ export const basic = {
           name: "geekblue-5",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 47,
             g: 84,
@@ -1139,7 +1139,7 @@ export const basic = {
           name: "geekblue-6",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 29,
             g: 57,
@@ -1148,7 +1148,7 @@ export const basic = {
           name: "geekblue-7",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 16,
             g: 35,
@@ -1157,7 +1157,7 @@ export const basic = {
           name: "geekblue-8",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 6,
             g: 17,
@@ -1166,7 +1166,7 @@ export const basic = {
           name: "geekblue-9",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 3,
             g: 8,
@@ -1182,7 +1182,7 @@ export const basic = {
       type: "discrete-scale",
       colors: [
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 249,
             g: 240,
@@ -1191,7 +1191,7 @@ export const basic = {
           name: "purple-1",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 239,
             g: 219,
@@ -1200,7 +1200,7 @@ export const basic = {
           name: "purple-2",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 211,
             g: 173,
@@ -1209,7 +1209,7 @@ export const basic = {
           name: "purple-3",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 179,
             g: 127,
@@ -1218,7 +1218,7 @@ export const basic = {
           name: "purple-4",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 146,
             g: 84,
@@ -1227,7 +1227,7 @@ export const basic = {
           name: "purple-5",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 114,
             g: 46,
@@ -1236,7 +1236,7 @@ export const basic = {
           name: "purple-6",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 83,
             g: 29,
@@ -1245,7 +1245,7 @@ export const basic = {
           name: "purple-7",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 57,
             g: 16,
@@ -1254,7 +1254,7 @@ export const basic = {
           name: "purple-8",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 34,
             g: 7,
@@ -1263,7 +1263,7 @@ export const basic = {
           name: "purple-9",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 18,
             g: 3,
@@ -1279,7 +1279,7 @@ export const basic = {
       type: "discrete-scale",
       colors: [
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 240,
@@ -1288,7 +1288,7 @@ export const basic = {
           name: "magenta-1",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 214,
@@ -1297,7 +1297,7 @@ export const basic = {
           name: "magenta-2",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 173,
@@ -1306,7 +1306,7 @@ export const basic = {
           name: "magenta-3",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 133,
@@ -1315,7 +1315,7 @@ export const basic = {
           name: "magenta-4",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 247,
             g: 89,
@@ -1324,7 +1324,7 @@ export const basic = {
           name: "magenta-5",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 235,
             g: 47,
@@ -1333,7 +1333,7 @@ export const basic = {
           name: "magenta-6",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 196,
             g: 29,
@@ -1342,7 +1342,7 @@ export const basic = {
           name: "magenta-7",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 158,
             g: 16,
@@ -1351,7 +1351,7 @@ export const basic = {
           name: "magenta-8",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 120,
             g: 6,
@@ -1360,7 +1360,7 @@ export const basic = {
           name: "magenta-9",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 82,
             g: 3,
@@ -1382,7 +1382,7 @@ export const neutral = {
       type: "discrete-scale",
       colors: [
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 255,
             g: 255,
@@ -1391,7 +1391,7 @@ export const neutral = {
           name: "gray-1",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 250,
             g: 250,
@@ -1400,7 +1400,7 @@ export const neutral = {
           name: "gray-2",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 245,
             g: 245,
@@ -1409,7 +1409,7 @@ export const neutral = {
           name: "gray-3",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 240,
             g: 240,
@@ -1418,7 +1418,7 @@ export const neutral = {
           name: "gray-4",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 217,
             g: 217,
@@ -1427,7 +1427,7 @@ export const neutral = {
           name: "gray-5",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 191,
             g: 191,
@@ -1436,7 +1436,7 @@ export const neutral = {
           name: "gray-6",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 140,
             g: 140,
@@ -1445,7 +1445,7 @@ export const neutral = {
           name: "gray-7",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 89,
             g: 89,
@@ -1454,7 +1454,7 @@ export const neutral = {
           name: "gray-8",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 67,
             g: 67,
@@ -1463,7 +1463,7 @@ export const neutral = {
           name: "gray-9",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 38,
             g: 38,
@@ -1472,7 +1472,7 @@ export const neutral = {
           name: "gray-10",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 31,
             g: 31,
@@ -1481,7 +1481,7 @@ export const neutral = {
           name: "gray-11",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 20,
             g: 20,
@@ -1490,7 +1490,7 @@ export const neutral = {
           name: "gray-12",
         },
         {
-          space: "rgb",
+          model: "rgb",
           value: {
             r: 0,
             g: 0,

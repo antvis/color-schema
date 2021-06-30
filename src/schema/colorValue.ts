@@ -1,4 +1,4 @@
-export type ColorSpace = "hsl" | "hsv" | "hsi" | "rgb" | "rgba" | "lab" | "lch" | "cmyk";
+export type ColorModel = "hsl" | "hsv" | "hsi" | "rgb" | "rgba" | "lab" | "lch" | "cmyk";
 
 export interface HSLValue {
   /**
@@ -26,7 +26,7 @@ export const HSLValueRange: Record<keyof HSLValue, range> = {
 };
 
 export interface HSLColor {
-  space: "hsl";
+  model: "hsl";
   value: HSLValue;
 }
 
@@ -55,7 +55,7 @@ export const HSVValueRange: Record<keyof HSVValue, range> = {
 };
 
 export interface HSVColor {
-  space: "hsv";
+  model: "hsv";
   value: HSVValue;
 }
 
@@ -84,7 +84,7 @@ export const HSIValueRange: Record<keyof HSIValue, range> = {
 };
 
 export interface HSIColor {
-  space: "hsi";
+  model: "hsi";
   value: HSIValue;
 }
 
@@ -113,7 +113,7 @@ export const RGBValueRange: Record<keyof RGBValue, range> = {
 };
 
 export interface RGBColor {
-  space: "rgb";
+  model: "rgb";
   value: RGBValue;
 }
 
@@ -148,7 +148,7 @@ export const RGBAValueRange: Record<keyof RGBAValue, range> = {
 };
 
 export interface RGBAColor {
-  space: "rgba";
+  model: "rgba";
   value: RGBAValue;
 }
 
@@ -177,7 +177,7 @@ export const LABRange: Record<keyof LABValue, range> = {
 };
 
 export interface LABColor {
-  space: "lab";
+  model: "lab";
   value: LABValue;
 }
 
@@ -206,7 +206,7 @@ export const LCHRange: Record<keyof LCHValue, range> = {
 };
 
 export interface LCHColor {
-  space: "lch";
+  model: "lch";
   value: LCHValue;
 }
 
@@ -241,15 +241,15 @@ export const CMYKRange: Record<keyof CMYKValue, range> = {
 };
 
 export interface CMYKColor {
-  space: "cmyk";
+  model: "cmyk";
   value: CMYKValue;
 }
 
-interface ColorSpaceInfo {
+interface ColorModelInfo {
   [key: string]: range;
 }
 
-export const ColorSpaceRange: Record<ColorSpace, ColorSpaceInfo> = {
+export const ColorModelRange: Record<ColorModel, ColorModelInfo> = {
   lab: LABRange,
   lch: LCHRange,
   rgb: RGBValueRange,
@@ -261,12 +261,12 @@ export const ColorSpaceRange: Record<ColorSpace, ColorSpaceInfo> = {
 };
 
 export function isColorValue(colorValue: ColorValue): colorValue is ColorValue {
-  const { space, value } = colorValue;
-  const colorSpaceRange = ColorSpaceRange[space];
+  const { model, value } = colorValue;
+  const colorModelRange = ColorModelRange[model];
 
   return (
-    Object.keys(value).sort().join(",") === Object.keys(colorSpaceRange).sort().join(",") &&
-    Object.entries(value).every(([key, v]) => v >= colorSpaceRange[key][0] && v <= colorSpaceRange[key][1])
+    Object.keys(value).sort().join(",") === Object.keys(colorModelRange).sort().join(",") &&
+    Object.entries(value).every(([key, v]) => v >= colorModelRange[key][0] && v <= colorModelRange[key][1])
   );
 }
 
