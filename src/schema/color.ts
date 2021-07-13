@@ -1,7 +1,7 @@
-import { ColorValue } from "./colorValue";
-import chroma, { Color as ChromaColor } from "chroma-js";
+import chroma, { Color as ChromaColor } from 'chroma-js';
+import { ColorValue } from './colorValue';
 
-export type Undertone = "warm" | "neutral" | "cool";
+export type Undertone = 'warm' | 'neutral' | 'cool';
 
 export interface ColorBaseInfo {
   id?: string;
@@ -34,5 +34,5 @@ export function colorToHex(color: Color): string {
     return chroma(value).hex();
   }
 
-  return "";
+  return '';
 }

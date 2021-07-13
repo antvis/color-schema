@@ -1,7 +1,7 @@
-import { AssetPack } from "./assetPack";
+import { AssetPack } from './assetPack';
 
 export type ColorSchema = AssetPack;
 
-export * from "./palette";
-export * from "./color";
-export * from "./colorValue";
+export * from './palette';
+export * from './color';
+export * from './colorValue';

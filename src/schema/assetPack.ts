@@ -1,4 +1,4 @@
-import { Palette } from "./palette";
+import { Palette } from './palette';
 
 export interface AssetPack {
   brandName: string;

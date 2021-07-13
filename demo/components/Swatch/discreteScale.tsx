@@ -1,8 +1,8 @@
-import React, { FC } from "react";
-import classNames from "classnames";
-import styles from "./index.module.less";
+import React, { FC } from 'react';
+import classNames from 'classnames';
+import Colors from './colors';
+import styles from './index.module.less';
 
-import Colors from "./colors";
 
 interface DiscreteScaleSwatchProps {
   title: string;
@@ -11,12 +11,7 @@ interface DiscreteScaleSwatchProps {
   description?: string;
 }
 
-const DiscreteScaleSwatch: FC<DiscreteScaleSwatchProps> = ({
-  title,
-  dark = false,
-  colors = [],
-  description = "",
-}) => {
+const DiscreteScaleSwatch: FC<DiscreteScaleSwatchProps> = ({ title, dark = false, colors = [], description = '' }) => {
   const colorStyle: React.CSSProperties = {};
 
   return (
@@ -32,7 +27,7 @@ const DiscreteScaleSwatch: FC<DiscreteScaleSwatchProps> = ({
           <Colors
             name={title}
             colorStyle={{
-              ...colorStyle
+              ...colorStyle,
             }}
             colors={colors}
             description={description}

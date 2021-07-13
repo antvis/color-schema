@@ -1,9 +1,9 @@
-import React, { FC } from "react";
-import classNames from "classnames";
-import chroma from "chroma-js";
-import styles from "./index.module.less";
+import React, { FC } from 'react';
+import classNames from 'classnames';
+import chroma from 'chroma-js';
+import Colors from './colors';
+import styles from './index.module.less';
 
-import Colors from "./colors";
 
 interface ContinuousScaleSwatchProps {
   title: string;
@@ -17,7 +17,7 @@ const ContinuousScaleSwatch: FC<ContinuousScaleSwatchProps> = ({
   title,
   dark = false,
   colors = [],
-  description = "",
+  description = '',
   locations = [0, 1],
 }) => {
   const colorStyle: React.CSSProperties = {};
@@ -39,8 +39,8 @@ const ContinuousScaleSwatch: FC<ContinuousScaleSwatchProps> = ({
             name={title}
             colorStyle={{
               ...colorStyle,
-              maxWidth: `1px`,
-              boxShadow: "0 0 0 0",
+              maxWidth: '1px',
+              boxShadow: '0 0 0 0',
             }}
             colors={colorSclices}
             description={description}
@@ -55,7 +55,7 @@ const ContinuousScaleSwatch: FC<ContinuousScaleSwatchProps> = ({
                 </div>
                 <div className={styles.info}>
                   <div className={styles.property}>Location:</div>
-                  <div className={styles.value}>{Math.round((i * 100) / sliceCount) + "%"}</div>
+                  <div className={styles.value}>{`${Math.round((i * 100) / sliceCount)  }%`}</div>
                 </div>
               </div>
             )}

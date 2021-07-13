@@ -1,16 +1,16 @@
-import React, { FC, useRef, useState } from "react";
-import { message, Tooltip } from "antd";
-import { QuestionCircleFilled } from "@ant-design/icons";
-import classNames from "classnames";
-import styles from "./index.module.less";
-import SwatchTooltip from "./tooltip";
+import React, { FC, useRef, useState } from 'react';
+import { message, Tooltip } from 'antd';
+import { QuestionCircleFilled } from '@ant-design/icons';
+import classNames from 'classnames';
+import SwatchTooltip from './tooltip';
+import styles from './index.module.less';
 
 const copyToClipboard = (str: string) => {
-  const el = document.createElement("textarea");
+  const el = document.createElement('textarea');
   el.value = str;
   document.body.appendChild(el);
   el.select();
-  document.execCommand("copy");
+  document.execCommand('copy');
   document.body.removeChild(el);
 };
 
@@ -69,7 +69,7 @@ const Colors: FC<ColorsProps> = ({ colorStyle = {}, colors = [], names = [], nam
           setHoveredColorIndex(i);
         }}
       >
-        <span className={styles.name} style={{ display: colors.length > 10 ? "none" : "" }}>
+        <span className={styles.name} style={{ display: colors.length > 10 ? 'none' : '' }}>
           {names[i]}
         </span>
       </div>
@@ -77,7 +77,7 @@ const Colors: FC<ColorsProps> = ({ colorStyle = {}, colors = [], names = [], nam
   };
 
   return (
-    <div className={styles.colors} style={{ width: colors.length > 10 ? "100%" : "" }}>
+    <div className={styles.colors} style={{ width: colors.length > 10 ? '100%' : '' }}>
       <div
         className={styles.container}
         onMouseEnter={() => {
@@ -93,7 +93,7 @@ const Colors: FC<ColorsProps> = ({ colorStyle = {}, colors = [], names = [], nam
       >
         {description ? (
           <div className={styles.name}>
-            <span style={{ marginRight: "5px" }}>{name}</span>
+            <span style={{ marginRight: '5px' }}>{name}</span>
             <Tooltip placement="bottom" title={description}>
               <QuestionCircleFilled />
             </Tooltip>

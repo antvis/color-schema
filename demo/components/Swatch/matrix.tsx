@@ -1,8 +1,8 @@
-import React, { FC } from "react";
-import classNames from "classnames";
-import styles from "./index.module.less";
+import React, { FC } from 'react';
+import classNames from 'classnames';
+import Colors from './colors';
+import styles from './index.module.less';
 
-import Colors from "./colors";
 
 interface MatrixSwatchProps {
   title: string;
@@ -11,12 +11,7 @@ interface MatrixSwatchProps {
   description?: string;
 }
 
-const MatrixSwatch: FC<MatrixSwatchProps> = ({
-  title,
-  dark = false,
-  colors = [],
-  description = "",
-}) => {
+const MatrixSwatch: FC<MatrixSwatchProps> = ({ title, dark = false, colors = [], description = '' }) => {
   const colorStyle: React.CSSProperties = {};
 
   return (

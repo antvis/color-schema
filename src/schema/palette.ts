@@ -1,15 +1,15 @@
-import { Color, ContinuousColor } from "./color";
+import { Color, ContinuousColor } from './color';
 
 export type ColorSchemeType =
-  | "monochromatic"
-  | "complementary"
-  | "split-complementary"
-  | "achromatic"
-  | "analogous"
-  | "triadic"
-  | "tetradic"
-  | "polychromatic"
-  | "customized";
+  | 'monochromatic'
+  | 'complementary'
+  | 'split-complementary'
+  | 'achromatic'
+  | 'analogous'
+  | 'triadic'
+  | 'tetradic'
+  | 'polychromatic'
+  | 'customized';
 
 export interface PaletteBaseInfo {
   id?: string;
@@ -20,25 +20,25 @@ export interface PaletteBaseInfo {
   usage?: string[];
 }
 
-export type PaletteType = "categorical" | "discrete-scale" | "continuous-scale" | "matrix";
+export type PaletteType = 'categorical' | 'discrete-scale' | 'continuous-scale' | 'matrix';
 
 export type CategoricalPalette = PaletteBaseInfo & {
-  type: "categorical";
+  type: 'categorical';
   colors: Color[];
 };
 
 export type DiscreteScalePalette = PaletteBaseInfo & {
-  type: "discrete-scale";
+  type: 'discrete-scale';
   colors: Color[];
 };
 
 export type ContinuousScalePalette = PaletteBaseInfo & {
-  type: "continuous-scale";
+  type: 'continuous-scale';
   colors: ContinuousColor[];
 };
 
 export type MatrixPalette = PaletteBaseInfo & {
-  type: "matrix";
+  type: 'matrix';
   colors: Color[][];
   origin: {
     x: Color[];
@@ -47,22 +47,22 @@ export type MatrixPalette = PaletteBaseInfo & {
 };
 
 export function isCategoricalPalette(palette: Palette): palette is CategoricalPalette {
-  if (palette.type === "categorical") return true;
+  if (palette.type === 'categorical') return true;
   return false;
 }
 
 export function isDiscreteScalePalette(palette: Palette): palette is DiscreteScalePalette {
-  if (palette.type === "discrete-scale") return true;
+  if (palette.type === 'discrete-scale') return true;
   return false;
 }
 
 export function isContinuousPalette(palette: Palette): palette is ContinuousScalePalette {
-  if (palette.type === "continuous-scale") return true;
+  if (palette.type === 'continuous-scale') return true;
   return false;
 }
 
 export function isMatrixPalette(palette: Palette): palette is MatrixPalette {
-  if (palette.type === "matrix") return true;
+  if (palette.type === 'matrix') return true;
   return false;
 }
 
