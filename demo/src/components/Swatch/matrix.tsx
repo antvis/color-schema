@@ -10,7 +10,12 @@ interface MatrixSwatchProps {
   description?: string;
 }
 
-const MatrixSwatch: FC<MatrixSwatchProps> = ({ title, dark = false, colors = [], description = '' }) => {
+const MatrixSwatch: FC<MatrixSwatchProps> = ({
+  title,
+  dark = false,
+  colors = [],
+  description = '',
+}: MatrixSwatchProps) => {
   const colorStyle: React.CSSProperties = {};
 
   return (

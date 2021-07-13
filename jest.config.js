@@ -1,13 +1,13 @@
 module.exports = {
-  testEnvironment: "node",
-  preset: "ts-jest",
+  testEnvironment: 'node',
+  preset: 'ts-jest',
   globals: {
-    "ts-jest": {
+    'ts-jest': {
       diagnostics: false,
     },
   },
-  testPathIgnorePatterns: ["/node_modules/"],
+  testPathIgnorePatterns: ['/node_modules/'],
   collectCoverage: false,
-  testRegex: "/test/.*.test.ts?$",
+  testRegex: '/__tests__/.*.test.ts?$',
   verbose: false,
 };

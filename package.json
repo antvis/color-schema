@@ -29,7 +29,8 @@
     "ci": "run-s lint test build",
     "prepublishOnly": "npm run ci",
     "prepare": "husky install",
-    "start:demo": "cd demo && npm install && npm start",
+    "prepare:demo": "cd demo && npm install",
+    "start:demo": "npm run prepare:demo && npm start",
     "deploy:site": "cd demo && npm run deploy:site",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
@@ -96,12 +97,12 @@
   },
   "limit-size": [
     {
-      "path": "dist/color-palette-json-schema.js",
+      "path": "dist/color-palette-json-schema.min.js",
       "limit": "8 Kb",
       "gzip": true
     },
     {
-      "path": "dist/color-palette-json-schema.js",
+      "path": "dist/color-palette-json-schema.min.js",
       "limit": "24 Kb"
     }
   ]
