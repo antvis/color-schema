@@ -15,7 +15,7 @@ const CategoricalSwatch: FC<CategoricalSwatchProps> = ({
   colors = [],
   colornames = [],
   description = '',
-}) => {
+}: CategoricalSwatchProps) => {
   const colorStyle: React.CSSProperties = {};
 
   if (colors.length < 5) {

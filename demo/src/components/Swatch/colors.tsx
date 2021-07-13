@@ -23,7 +23,14 @@ interface ColorsProps {
   tooltip?: (color: string, index: number) => {};
 }
 
-const Colors: FC<ColorsProps> = ({ colorStyle = {}, colors = [], names = [], name, description, tooltip }) => {
+const Colors: FC<ColorsProps> = ({
+  colorStyle = {},
+  colors = [],
+  names = [],
+  name,
+  description,
+  tooltip,
+}: ColorsProps) => {
   if (colors.length === 0) {
     return null;
   }
@@ -35,7 +42,7 @@ const Colors: FC<ColorsProps> = ({ colorStyle = {}, colors = [], names = [], nam
   const [hoveredColorIndex, setHoveredColorIndex] = useState<number>();
 
   const Color = (color: string, i: number) => {
-    const colorBlock = useRef(null);
+    const colorBlock = useRef<HTMLDivElement>(null);
 
     return (
       <div
@@ -62,11 +69,15 @@ const Colors: FC<ColorsProps> = ({ colorStyle = {}, colors = [], names = [], nam
         }}
         ref={colorBlock}
         onMouseEnter={() => {
-          const { x, y } = colorBlock.current.getBoundingClientRect();
-          setHoveredColorX(x);
-          setHoveredColorY(y);
-          setHoveredColor(color);
-          setHoveredColorIndex(i);
+          if (!colorBlock.current) {
+            setTooltipDisplay(false);
+          } else {
+            const { x, y } = colorBlock.current.getBoundingClientRect();
+            setHoveredColorX(x);
+            setHoveredColorY(y);
+            setHoveredColor(color);
+            setHoveredColorIndex(i);
+          }
         }}
       >
         <span className={styles.name} style={{ display: colors.length > 10 ? 'none' : '' }}>
@@ -102,7 +113,7 @@ const Colors: FC<ColorsProps> = ({ colorStyle = {}, colors = [], names = [], nam
           <span className={styles.name}>{name}</span>
         )}
 
-        {tooltipDisplay ? (
+        {tooltipDisplay && hoveredColorX && hoveredColorY && hoveredColor && hoveredColorIndex && tooltip ? (
           <SwatchTooltip x={hoveredColorX} y={hoveredColorY} content={tooltip(hoveredColor, hoveredColorIndex)} />
         ) : null}
 

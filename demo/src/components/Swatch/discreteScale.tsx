@@ -10,7 +10,12 @@ interface DiscreteScaleSwatchProps {
   description?: string;
 }
 
-const DiscreteScaleSwatch: FC<DiscreteScaleSwatchProps> = ({ title, dark = false, colors = [], description = '' }) => {
+const DiscreteScaleSwatch: FC<DiscreteScaleSwatchProps> = ({
+  title,
+  dark = false,
+  colors = [],
+  description = '',
+}: DiscreteScaleSwatchProps) => {
   const colorStyle: React.CSSProperties = {};
 
   return (

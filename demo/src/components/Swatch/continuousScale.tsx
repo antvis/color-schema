@@ -18,7 +18,7 @@ const ContinuousScaleSwatch: FC<ContinuousScaleSwatchProps> = ({
   colors = [],
   description = '',
   locations = [0, 1],
-}) => {
+}: ContinuousScaleSwatchProps) => {
   const colorStyle: React.CSSProperties = {};
 
   const sliceCount = 300; // width Adaptive

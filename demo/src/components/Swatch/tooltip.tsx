@@ -8,7 +8,7 @@ interface SwatchTooltipProps {
   content: ReactNode | (() => ReactNode);
 }
 
-const SwatchTooltip: FC<SwatchTooltipProps> = ({ x, y, height = 100, width = 180, content }) => {
+const SwatchTooltip: FC<SwatchTooltipProps> = ({ x, y, height = 100, width = 180, content }: SwatchTooltipProps) => {
   const tooltipWidth = 100;
   const triangleHeight = 8;
   const tooltipDivHeight = height + triangleHeight; // = rectangleHeight + 2 * triangleHeight
