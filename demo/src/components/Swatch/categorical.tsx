@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import Colors from './colors';
 import styles from './index.module.less';
 
-
 interface CategoricalSwatchProps {
   dark?: boolean;
   colors?: string[];
