@@ -30,17 +30,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/neoddish/color-palette-json-schema.git"
+    "url": "git+https://github.com/antvis/color-palette-json-schema.git"
   },
-  "author": "neoddish",
+  "author": "AntV",
   "license": "MIT",
+  "homepage": "https://antvis.github.io/color-palette-json-schema",
   "publishConfig": {
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/neoddish/color-palette-json-schema/issues"
+    "url": "https://github.com/antvis/color-palette-json-schema/issues"
   },
-  "homepage": "https://github.com/neoddish/color-palette-json-schema#readme",
   "dependencies": {},
   "devDependencies": {
     "@ant-design/icons": "^4.6.2",
