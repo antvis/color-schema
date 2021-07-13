@@ -1,4 +1,4 @@
-export type ColorModel = "hsl" | "hsv" | "hsi" | "rgb" | "rgba" | "lab" | "lch" | "cmyk";
+export type ColorModel = 'hsl' | 'hsv' | 'hsi' | 'rgb' | 'rgba' | 'lab' | 'lch' | 'cmyk';
 
 export interface HSLValue {
   /**
@@ -26,7 +26,7 @@ export const HSLValueRange: Record<keyof HSLValue, range> = {
 };
 
 export interface HSLColor {
-  model: "hsl";
+  model: 'hsl';
   value: HSLValue;
 }
 
@@ -55,7 +55,7 @@ export const HSVValueRange: Record<keyof HSVValue, range> = {
 };
 
 export interface HSVColor {
-  model: "hsv";
+  model: 'hsv';
   value: HSVValue;
 }
 
@@ -84,7 +84,7 @@ export const HSIValueRange: Record<keyof HSIValue, range> = {
 };
 
 export interface HSIColor {
-  model: "hsi";
+  model: 'hsi';
   value: HSIValue;
 }
 
@@ -113,7 +113,7 @@ export const RGBValueRange: Record<keyof RGBValue, range> = {
 };
 
 export interface RGBColor {
-  model: "rgb";
+  model: 'rgb';
   value: RGBValue;
 }
 
@@ -148,7 +148,7 @@ export const RGBAValueRange: Record<keyof RGBAValue, range> = {
 };
 
 export interface RGBAColor {
-  model: "rgba";
+  model: 'rgba';
   value: RGBAValue;
 }
 
@@ -177,7 +177,7 @@ export const LABRange: Record<keyof LABValue, range> = {
 };
 
 export interface LABColor {
-  model: "lab";
+  model: 'lab';
   value: LABValue;
 }
 
@@ -206,7 +206,7 @@ export const LCHRange: Record<keyof LCHValue, range> = {
 };
 
 export interface LCHColor {
-  model: "lch";
+  model: 'lch';
   value: LCHValue;
 }
 
@@ -241,7 +241,7 @@ export const CMYKRange: Record<keyof CMYKValue, range> = {
 };
 
 export interface CMYKColor {
-  model: "cmyk";
+  model: 'cmyk';
   value: CMYKValue;
 }
 
@@ -265,7 +265,7 @@ export function isColorValue(colorValue: ColorValue): colorValue is ColorValue {
   const colorModelRange = ColorModelRange[model];
 
   return (
-    Object.keys(value).sort().join(",") === Object.keys(colorModelRange).sort().join(",") &&
+    Object.keys(value).sort().join(',') === Object.keys(colorModelRange).sort().join(',') &&
     Object.entries(value).every(([key, v]) => v >= colorModelRange[key][0] && v <= colorModelRange[key][1])
   );
 }

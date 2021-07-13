@@ -1,7 +1,7 @@
-import colorSchema from "../build/color-schema.json";
-import Ajv from "ajv";
-import { matchersWithOptions } from "jest-json-schema";
-import classic from "../examples/classic.json";
+import Ajv from 'ajv';
+import { matchersWithOptions } from 'jest-json-schema';
+import colorSchema from '../build/color-schema.json';
+import classic from '../examples/classic.json';
 
 expect.extend(
   matchersWithOptions({
@@ -11,12 +11,12 @@ expect.extend(
 
 const colorAssets = classic;
 
-describe("test", () => {
-  test("schema itself is valid", () => {
+describe('test', () => {
+  test('schema itself is valid', () => {
     expect(colorSchema).toBeValidSchema();
   });
 
-  it("schema validate", () => {
+  it('schema validate', () => {
     // by jest-json-schema (powered by ajv)
     expect(colorAssets).toMatchSchema(colorSchema);
 

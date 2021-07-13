@@ -1,8 +1,8 @@
-import React, { FC } from "react";
-import classNames from "classnames";
-import styles from "./index.module.less";
+import React, { FC } from 'react';
+import classNames from 'classnames';
+import Colors from './colors';
+import styles from './index.module.less';
 
-import Colors from "./colors";
 
 interface CategoricalSwatchProps {
   dark?: boolean;
@@ -15,7 +15,7 @@ const CategoricalSwatch: FC<CategoricalSwatchProps> = ({
   dark = false,
   colors = [],
   colornames = [],
-  description = "",
+  description = '',
 }) => {
   const colorStyle: React.CSSProperties = {};
 
@@ -36,13 +36,13 @@ const CategoricalSwatch: FC<CategoricalSwatchProps> = ({
     <div
       className={classNames({
         [styles.dark]: !!dark,
-        [styles.multiple]: colors.includes("|"),
+        [styles.multiple]: colors.includes('|'),
         [styles.less]: colors.length < 5,
       })}
     >
       <div className={styles.panel}>
         <div className={styles.panelContainer}>
-          <Colors names={colornames} colorStyle={colorStyle} colors={colors} description={description}/>
+          <Colors names={colornames} colorStyle={colorStyle} colors={colors} description={description} />
         </div>
       </div>
     </div>

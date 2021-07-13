@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import Ajv from "ajv";
-import colorSchema from "../build/color-schema.json";
-import chroma from "chroma-js";
-import { Button, Dropdown, Menu } from "antd";
-import { DownOutlined } from "@ant-design/icons";
+import React, { useState } from 'react';
+import Ajv from 'ajv';
+import chroma from 'chroma-js';
+import { Button, Dropdown, Menu } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
+import colorSchema from '../build/color-schema.json';
 import {
   Color,
   ContinuousColor,
@@ -13,19 +13,19 @@ import {
   ContinuousScalePalette as ConP,
   MatrixPalette as MatP,
   ColorSchema,
-} from "../src";
-import Swatch from "./components/Swatch";
-import classic from "../examples/classic.json";
-import * as antdColors from "../examples/antd-color";
-import antvColor from "../examples/antv-color.json";
-import { colorToHex } from "../src";
+ colorToHex } from '../src';
+import classic from '../examples/classic.json';
+import * as antdColors from '../examples/antd-color';
+import antvColor from '../examples/antv-color.json';
+import Swatch from './components/Swatch';
+
 
 const examples: Record<string, any> = {
-  "Classic Demo": classic,
-  "antd Colors - Productional": antdColors.product,
-  "antd Colors - System-level Basic": antdColors.basic,
-  "antd Colors - System-level Neutral": antdColors.neutral,
-  "AntV Colors": antvColor,
+  'Classic Demo': classic,
+  'antd Colors - Productional': antdColors.product,
+  'antd Colors - System-level Basic': antdColors.basic,
+  'antd Colors - System-level Neutral': antdColors.neutral,
+  'AntV Colors': antvColor,
 };
 
 const ajv = new Ajv();
@@ -35,7 +35,7 @@ const ColorCell = (props: { color: Color }) => {
   const { color } = props;
   const tooltip = Object.keys(color)
     .map((key) => `${key}: ${color[key as keyof Color]}`)
-    .join("\n");
+    .join('\n');
   const fill = colorToHex(color);
   return (
     <div className="color-cell">
@@ -84,8 +84,8 @@ const DiscretePalette = (props: { palette: DisP }) => {
 };
 
 const colorsHaveLocation = (colors: ContinuousColor[]): boolean => {
-  for (let color of colors) {
-    if (typeof color.location === "undefined") {
+  for (const color of colors) {
+    if (typeof color.location === 'undefined') {
       return false;
     }
   }
@@ -141,18 +141,18 @@ const MatrixPalette = (props: { palette: MatP }) => {
 const ColorPaletteView = (props: { palette: Palette }) => {
   const { palette } = props;
   switch (palette.type) {
-    case "categorical":
+    case 'categorical':
       return (
         <Swatch
           title={palette.name}
           type="categorical"
           colors={palette.colors.map((color) => colorToHex(color))}
-          colornames={palette.colors.map((color) => color.name || "")}
+          colornames={palette.colors.map((color) => color.name || '')}
           description={palette.description}
         />
       );
 
-    case "discrete-scale":
+    case 'discrete-scale':
       return (
         <Swatch
           title={palette.name}
@@ -162,7 +162,7 @@ const ColorPaletteView = (props: { palette: Palette }) => {
         />
       );
 
-    case "continuous-scale":
+    case 'continuous-scale':
       return (
         <Swatch
           title={palette.name}
@@ -177,7 +177,7 @@ const ColorPaletteView = (props: { palette: Palette }) => {
         />
       );
 
-    case "matrix":
+    case 'matrix':
       return (
         <Swatch
           title={palette.name}
@@ -227,7 +227,7 @@ export default function App() {
               <div className="palette-view">
                 <div className="palette-info">
                   {Object.keys(palette)
-                    .filter((key) => key !== "colors")
+                    .filter((key) => key !== 'colors')
                     .map((key) => (
                       <p key={key}>
                         <b>{key}</b>
