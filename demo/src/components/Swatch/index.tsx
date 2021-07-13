@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import { Switch } from 'antd';
-import { PaletteType } from '../../../src';
+import { PaletteType } from '../../../../src';
 import CatSwatch from './categorical';
 import DisSwatch from './discreteScale';
 import ConSwatch from './continuousScale';
@@ -18,7 +18,7 @@ interface SwatchProps {
   locations?: number[];
 }
 
-const Swatch: FC<SwatchProps> = (props) => {
+const Swatch: FC<SwatchProps> = (props: SwatchProps) => {
   const { type, title, darkmode = true } = props;
   const [dark, toggleDark] = useState(false);
 

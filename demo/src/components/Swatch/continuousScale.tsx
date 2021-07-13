@@ -4,7 +4,6 @@ import chroma from 'chroma-js';
 import Colors from './colors';
 import styles from './index.module.less';
 
-
 interface ContinuousScaleSwatchProps {
   title: string;
   dark?: boolean;
@@ -55,7 +54,7 @@ const ContinuousScaleSwatch: FC<ContinuousScaleSwatchProps> = ({
                 </div>
                 <div className={styles.info}>
                   <div className={styles.property}>Location:</div>
-                  <div className={styles.value}>{`${Math.round((i * 100) / sliceCount)  }%`}</div>
+                  <div className={styles.value}>{`${Math.round((i * 100) / sliceCount)}%`}</div>
                 </div>
               </div>
             )}
