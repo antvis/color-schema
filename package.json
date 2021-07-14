@@ -26,7 +26,7 @@
     "build:esm": "rimraf ./esm && tsc --module ESNext --outDir esm",
     "build": "run-p build:*",
     "schema": "mkdir -p build && ts-json-schema-generator -f tsconfig.json -p src/index.ts -t ColorSchema --no-type-check --no-ref-encode > build/color-schema.json",
-    "ci": "run-s lint test build",
+    "ci": "run-s lint test build schema",
     "prepublishOnly": "npm run ci",
     "prepare": "husky install",
     "prepare:demo": "cd demo && npm install",
