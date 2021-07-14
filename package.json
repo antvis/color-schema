@@ -1,6 +1,6 @@
 {
   "name": "@antv/color-schema",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "JSON Schema for Color Palette",
   "main": "lib/src/index.js",
   "types": "lib/src/index.d.ts",
