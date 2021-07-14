@@ -1,6 +1,6 @@
 <img src="https://gw.alipayobjects.com/zos/antfincdn/R8sN%24GNdh6/language.svg" width="18"> [English](./README.md) | 简体中文
 
-# color-palette-json-schema
+# color-schema
 
 一个用于规范语义化的色彩资产或色板的JSON模式。
 

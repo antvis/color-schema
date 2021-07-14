@@ -1,6 +1,6 @@
 <img src="https://gw.alipayobjects.com/zos/antfincdn/R8sN%24GNdh6/language.svg" width="18"> English | [简体中文](./README.zh-CN.md)
 
-# color-palette-json-schema
+# color-schema
 
 A JSON schema used to regulate semantic color assets or palettes.
 
