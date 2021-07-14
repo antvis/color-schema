@@ -2,6 +2,8 @@
 
 # color-schema
 
+> Former name： color-palette-json-schema
+
 A JSON schema used to regulate semantic color assets or palettes.
 
 ## Example
