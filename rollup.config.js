@@ -6,8 +6,8 @@ module.exports = [
   {
     input: 'src/index.ts',
     output: {
-      file: 'dist/color-palette-json-schema.min.js',
-      name: 'color-palette-json-schema',
+      file: 'dist/color-schema.min.js',
+      name: 'color-schema',
       format: 'umd',
       sourcemap: false,
     },
