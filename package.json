@@ -8,9 +8,9 @@
   "module": "es/src/index.js",
   "files": [
     "src",
-    "es",
-    "dist",
-    "lib"
+    "esm",
+    "lib",
+    "build"
   ],
   "scripts": {
     "clean": "rimraf lib esm dist",
