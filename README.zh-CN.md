@@ -1,10 +1,18 @@
 <img src="https://gw.alipayobjects.com/zos/antfincdn/R8sN%24GNdh6/language.svg" width="18"> [English](./README.md) | 简体中文
 
-# color-schema
+<h1 align="center">
+<b>@antv/color-schema</b>
+</h1>
 
+<div align="center">
 一个用于规范语义化的色彩资产或色板的JSON模式。
+</div>
 
-## 例子
+## ✨ Features
+* **验证**: 验证输入的JSON数据是否符合色彩资产的数据结构规范。
+* **开发**: 在开发时使用定义好的类型和接口.
+
+## 📖 例子
 
 ```js
 {
@@ -105,14 +113,12 @@
   <img src="https://gw.alipayobjects.com/zos/antfincdn/OJkRfCvSxN/palettes.png" width="300" />
 </div>
 
-## 安装包
+## 📦 安装包
 ```bash
-$ npm install color-schema-test
+$ npm install @antv/color-schema
 ```
 
-## 使用
-
-> 验证输入的JSON数据是否符合色彩资产的数据结构规范，并可以在开发时使用定义好的类型和接口。
+## 🔨 使用
 
 ### 验证 
 通过[Ajv](https://github.com/ajv-validator/ajv) (JSON模式验证器) 验证：
@@ -131,7 +137,7 @@ const valid = validate(data);
 一些相关类型和接口的描述：
 
 ```js
-import { ColorSchema, Palette, Color } from 'color-schema-test';
+import { ColorSchema, Palette, Color } from '@antv/color-schema';
 ```
 
 #### ColorSchema
@@ -208,14 +214,18 @@ type ColorModel = "hsl" | "hsv" | "hsi" | "rgb" | "rgba" | "lab" | "lch" | "cmyk
 type Undertone = "warm" | "neutral" | "cool";
 ```
 
-## 开发
+## 💻 开发
 
 ```bash
 npm install
 npm run start
 ```
 
-## 相关链接
+## 🔗 相关链接
 
 * [Ant Design Colors](https://ant.design/docs/spec/colors)
 * [AntV Color Design](https://antv.vision/en/docs/specification/language/palette)
+
+## License
+
+MIT

@@ -1,12 +1,18 @@
 <img src="https://gw.alipayobjects.com/zos/antfincdn/R8sN%24GNdh6/language.svg" width="18"> English | [简体中文](./README.zh-CN.md)
 
-# color-schema
+<h1 align="center">
+<b>@antv/color-schema</b>
+</h1>
 
-> Former name： color-palette-json-schema
-
+<div align="center">
 A JSON schema used to regulate semantic color assets or palettes.
+</div>
 
-## Example
+## ✨ Features
+* **Validate**: Validate data with JSON schema.
+* **Develop**: Develop with types and interfaces.
+
+## 📖 Example
 
 ```js
 {
@@ -107,14 +113,12 @@ A JSON schema used to regulate semantic color assets or palettes.
   <img src="https://gw.alipayobjects.com/zos/antfincdn/OJkRfCvSxN/palettes.png" width="300" />
 </div>
 
-## Installation
+## 📦 Installation
 ```bash
-$ npm install color-schema-test
+$ npm install @antv/color-schema
 ```
 
-## Usage
-
-> Validate data with JSON schema, and develop with types and interfaces.
+## 🔨 Usage
 
 ### Validate 
 Validate by [Ajv](https://github.com/ajv-validator/ajv) (JSON schema validator):
@@ -133,7 +137,7 @@ const valid = validate(data);
 Some types and interfaces:
 
 ```js
-import { ColorSchema, Palette, Color } from 'color-schema-test';
+import { ColorSchema, Palette, Color } from '@antv/color-schema';
 ```
 
 #### ColorSchema
@@ -207,14 +211,18 @@ type ColorModel = "hsl" | "hsv" | "hsi" | "rgb" | "rgba" | "lab" | "lch" | "cmyk
 type Undertone = "warm" | "neutral" | "cool";
 ```
 
-## Dev
+## 💻 Dev
 
 ```bash
 npm install
 npm run start
 ```
 
-## Reference
+## 🔗 Reference
 
 * [Ant Design Colors](https://ant.design/docs/spec/colors)
 * [AntV Color Design](https://antv.vision/en/docs/specification/language/palette)
+
+## License
+
+MIT
