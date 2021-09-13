@@ -4,8 +4,8 @@
   "description": "JSON Schema for Color Palette",
   "main": "lib/src/index.js",
   "types": "lib/src/index.d.ts",
-  "browser": "dist/index.js",
-  "module": "es/src/index.js",
+  "unpkg": "dist/index.min.js",
+  "module": "esm/src/index.js",
   "files": [
     "src",
     "esm",
@@ -29,12 +29,13 @@
     "ci": "run-s lint test build schema",
     "prepublishOnly": "npm run ci",
     "prepare": "husky install",
-    "prepare:demo": "cd demo && npm install",
-    "start:demo": "npm run prepare:demo && npm start",
+    "setup:demo": "cd demo && npm install --package-lock=false",
+    "start:demo": "npm run setup:demo && cd demo && npm start",
     "deploy:site": "cd demo && npm run deploy:site",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "one-stop-setup": "npm install --package-lock=false && run-s build setup:demo"
   },
   "repository": {
     "type": "git",
@@ -97,12 +98,12 @@
   },
   "limit-size": [
     {
-      "path": "dist/color-schema.min.js",
+      "path": "dist/index.min.js",
       "limit": "8 Kb",
       "gzip": true
     },
     {
-      "path": "dist/color-schema.min.js",
+      "path": "dist/index.min.js",
       "limit": "24 Kb"
     }
   ]
