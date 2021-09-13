@@ -27,8 +27,7 @@ jobs:
 
       - name: Run ci
         run: |
-          npm install
-          npm run prepare:demo
+          npm run one-stop-setup
           npm run ci
 
       - name: coverall
