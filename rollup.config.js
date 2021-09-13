@@ -6,8 +6,8 @@ module.exports = [
   {
     input: 'src/index.ts',
     output: {
-      file: 'dist/color-schema.min.js',
-      name: 'color-schema',
+      file: 'dist/index.min.js',
+      name: 'ColorSchema',
       format: 'umd',
       sourcemap: false,
     },
