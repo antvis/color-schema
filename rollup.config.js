@@ -1,6 +1,7 @@
-import { uglify } from 'rollup-plugin-uglify';
 import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
+import { terser } from 'rollup-plugin-terser';
 
 module.exports = [
   {
@@ -11,6 +12,6 @@ module.exports = [
       format: 'umd',
       sourcemap: false,
     },
-    plugins: [resolve(), typescript(), uglify()],
+    plugins: [resolve(), commonjs(), typescript(), terser()],
   },
 ];
